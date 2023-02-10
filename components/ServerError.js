@@ -8,18 +8,30 @@ import Image from "next/image";
 
 function ServerError() {
   const [br, setBr] = useRecoilState(isPortuguese);
-  const [text, count] = useTypewriter({
+  const [text, a] = useTypewriter({
     words: [
       "Ooops.. Infelizmente não conseguimos estabelecer uma conexão com o servidor.",
     ],
     delaySpeed: 500,
   });
 
-  const [textUs, set] = useTypewriter({
+  const [textUs, b] = useTypewriter({
     words: [
       "Oops... unfortunately we couldn't establish a connection with the server.",
     ],
     delaySpeed: 500,
+  });
+
+  const [callUs, c] = useTypewriter({
+    words: ["saint", "dev**"],
+    delaySpeed: 3000,
+    loop: true,
+  });
+
+  const [callBr, d] = useTypewriter({
+    words: ["santo", "dev**"],
+    delaySpeed: 3000,
+    loop: true,
   });
 
   return (
@@ -45,7 +57,8 @@ function ServerError() {
       <h1 className="text-[#C586C0] mt-3">
         <span>(</span>
         <span className="text-[#CE9178]">
-          "{br ? "encontre um dev" : "find a dev"}"
+          "{br ? `encontre um ${callBr}` : `find a ${callUs}`}
+          <Cursor cursorColor="white" />"
         </span>
         <span>)</span>
       </h1>
