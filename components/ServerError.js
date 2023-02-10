@@ -54,10 +54,10 @@ function ServerError() {
         </p>
         <FaExclamationTriangle className="text-yellow-300" />
       </div>
-      <h1 className="text-[#C586C0] mt-3">
+      <h1 className="text-[#C586C0] mt-3 text-sm">
         <span>(</span>
         <span className="text-[#CE9178]">
-          "{br ? `encontre um ${callBr}` : `find a ${callUs}`}
+          "{br ? `chame um ${callBr}` : `call a ${callUs}`}
           <Cursor cursorColor="white" />"
         </span>
         <span>)</span>
