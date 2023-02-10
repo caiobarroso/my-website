@@ -45,7 +45,7 @@ export const experience_br = [
 ];
 
 export const education_br = {
-  university: "Universidade de Fortaleza - (UNIFOR)",
+  university: "Universidade de Fortaleza (UNIFOR)",
   description: "Tecnólogo, Análise e Desenvolvimento de Sistemas",
 };
 

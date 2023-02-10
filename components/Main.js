@@ -44,7 +44,7 @@ function Main() {
             <div className="flex justify-center items-center gap-4">
               <div>
                 <p className="text-white text-[3.2rem] sm:text-[4rem] font-robotoBold">
-                  {br ? "Sobre mim" : "About me"}
+                  {br ? "Sobre mim." : "About me."}
                 </p>
                 <div className="flex gap-4">
                   <p className="text-[#808080] text-sm sm:text-base">
@@ -60,16 +60,16 @@ function Main() {
                     <FaDownload className="w-4 h-4" />
                   </a>
                 </div>
-                <h2 className="text-[#682ae9] text-xl leading-6 lg:w-[70%] mt-4">
+                <h2 className="text-[#682ae9] text-[1rem] sm:text-lg leading-6 lg:w-[70%] mt-4">
                   {about.bio}
                 </h2>
               </div>
             </div>
 
-            <h2 className="text-base sm:text-lg text-[#808080] mt-4">
+            <h2 className="text-base text-[1rem] sm:text-lg text-[#808080] mt-4">
               // Javascript Fullstack Developer @ Bean Softwares
             </h2>
-            <h2 className="text-base sm:text-lg text-[#808080]">
+            <h2 className="text-base text-[1rem] sm:text-lg text-[#808080]">
               // JS &gt;&gt;&gt;&gt;
             </h2>
           </div>
@@ -98,7 +98,7 @@ function Main() {
                 <div key={index}>
                   <h2 className="text-[#682ae9] font-bold">{item.title}</h2>
                   <h2 className="">@ {item.place}</h2>
-                  <p className="text-base">{item.date}</p>
+                  <p className="text-sm">{item.date}</p>
                 </div>
               ))}
             </div>
@@ -111,7 +111,7 @@ function Main() {
 
             <div className="text-[1rem] sm:text-lg">
               <h2 className="text-[#682ae9] font-bold">
-                2019-2023 {education.university}
+                2019-2023 • {education.university}
               </h2>
               <h2 className="text-[#808080]">{education.description}</h2>
             </div>
