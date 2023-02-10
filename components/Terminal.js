@@ -211,8 +211,8 @@ function Terminal({}) {
                       Server, on PORT: "{" "}
                       <span className="text-[#4EB4D4]">+ PORT</span>{" "}
                       <span className="text-[#4EB4D4]">)</span>
-                      <span className="text-[#DCDCAA]">)</span>
                       <span className="text-[#C586C0]">{"}"}</span>
+                      <span className="text-[#DCDCAA]">)</span>
                     </span>
                   </span>
                 </h1>
