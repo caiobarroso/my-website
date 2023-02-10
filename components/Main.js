@@ -57,7 +57,7 @@ function Main() {
                     rel="noreferrer"
                   >
                     CV
-                    <FaDownload className="w-4 h-4" />
+                    <FaDownload className="w-3 h-3" />
                   </a>
                 </div>
                 <h2 className="text-[#682ae9] text-[1rem] sm:text-lg leading-6 lg:w-[70%] mt-4">
@@ -169,7 +169,7 @@ function Main() {
                     <p className="">{item.description}</p>
                     <div className="flex items-center gap-2 mt-1">
                       {item.tecnologies.map((i, index) => (
-                        <p className="text-[12px] sm:text-sm" key={index}>
+                        <p className="text-sm" key={index}>
                           {i} {index < item.tecnologies.length - 1 && "•"}
                         </p>
                       ))}

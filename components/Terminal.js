@@ -47,7 +47,7 @@ function Terminal({}) {
     if (input.toLocaleLowerCase() === "node server.js") {
       setTimeout(() => {
         setValid(true);
-        setText("Listening Server, on PORT: 4000...");
+        setText("Listening Server, on PORT: 4000");
       }, 2500);
     } else {
       setTimeout(() => {
