@@ -57,7 +57,7 @@ function ServerError() {
       <h1 className="text-[#C586C0] mt-3">
         <span>(</span>
         <span className="text-[#CE9178]">
-          "{br ? `encontre um ${callBr}` : `find a ${callUs}`}
+          "{br ? `chame um ${callBr}` : `call a ${callUs}`}
           <Cursor cursorColor="white" />"
         </span>
         <span>)</span>
