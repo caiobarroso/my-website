@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, chart } from "react-icons/fa";
-import { AiFillContacts } from "react-icons/ai";
 import { useRecoilState } from "recoil";
 import { isPortuguese } from "../atoms/index";
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { FaExclamationTriangle } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -41,6 +42,13 @@ function ServerError() {
         </p>
         <FaExclamationTriangle className="text-yellow-300" />
       </div>
+      <h1 className="text-[#C586C0] mt-3">
+        <span>(</span>
+        <span className="text-[#CE9178]">
+          "{br ? "encontre um dev" : "find a dev"}"
+        </span>
+        <span>)</span>
+      </h1>
     </div>
   );
 }
