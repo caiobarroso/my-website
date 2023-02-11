@@ -190,7 +190,7 @@ function Terminal() {
                   <span className="text-[#4EB4D4]">const</span>{" "}
                   <span className="text-[#4FC1FF]">job</span> ={" "}
                   <span className="text-[#CE9178]">
-                    'JavaScript Fullstack Developer'
+                    'Software Developer'
                   </span>
                 </h1>
                 <h1 className="text-sm sm:text-base text-white mt-1 sm:mt-[1.5px]">
