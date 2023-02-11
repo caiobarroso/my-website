@@ -13,21 +13,6 @@ function ServerError() {
   const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
 
-  const [text, a] = useTypewriter({
-    words: [
-      "Ooops.. Infelizmente não conseguimos estabelecer uma conexão com o servidor.",
-    ],
-    typeSpeed: 70,
-  });
-
-  const [textUs, b] = useTypewriter({
-    words: [
-      "Oops... unfortunately we couldn't establish a connection with the server.",
-    ],
-
-    typeSpeed: 70,
-  });
-
   const [callUs, c] = useTypewriter({
     words: ["saint", "dev**"],
     delaySpeed: 3000,
@@ -76,7 +61,9 @@ function ServerError() {
         className="mb-4"
       />
       <h1 className="font-robotoBold text-white text-base sm:text-2xl sm:w-1/2">
-        {br ? text : textUs} <Cursor cursorColor="white" />
+        {br
+          ? "Ooops.. Infelizmente não conseguimos estabelecer uma conexão com o servidor."
+          : "Oops... unfortunately we couldn't establish a connection with the server."}{" "}
       </h1>
       <div className="flex justify-center items-center mt-4 gap-3">
         <FaExclamationTriangle className="text-yellow-300" />
