@@ -13,7 +13,7 @@ export const tabs_us = [
 ];
 
 export const about_us = {
-  bio: "I'm Caio. I'm passionate about programming, focused on creating solutions and problem solving. Currently graduate in Systems Analysis and Development, with emphasis on web and mobile development (NodeJS, React & React-Native).",
+  bio: "I'm Caio. I'm passionate about programming, focused on creating inovations and problem solving. Currently graduate in Systems Analysis and Development, with emphasis on web and mobile development (NodeJS, React & React-Native).",
 };
 
 export const skills_us = {
