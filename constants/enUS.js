@@ -13,7 +13,7 @@ export const tabs_us = [
 ];
 
 export const about_us = {
-  bio: "Hello, my name is Gaius. I am passionate about programming, and my focus is on creating innovations and solving problems. I have a degree in Systems Analysis and Development. Today I work with an emphasis on web and mobile development (NodeJS, React & React-Native).",
+  bio: "Hello, my name is Caio. I am passionate about programming, and my focus is on creating innovations and solving problems. I have a degree in Systems Analysis and Development. Today I work with an emphasis on web and mobile development (NodeJS, React & React-Native).",
 };
 
 export const hard_skills_us = {
