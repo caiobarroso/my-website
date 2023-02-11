@@ -14,7 +14,7 @@ export const tabs_br = [
 ];
 
 export const about_br = {
-  bio: "Eu sou Caio. Sou apaixonado por programação, focado em criar soluções e solucionar problemas. Atualmente graduado em Análise e Desenvolvimento de Sistemas, com ênfase em desenvolvimento web e mobile (NodeJS, React & React-Native).",
+  bio: "Eu sou Caio. Sou apaixonado por programação, focado em criar inovações e solucionar problemas. Atualmente graduado em Análise e Desenvolvimento de Sistemas, com ênfase em desenvolvimento web e mobile (NodeJS, React & React-Native).",
 };
 
 export const skills_br = {
