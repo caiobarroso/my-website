@@ -69,3 +69,8 @@
   font-family: "Roboto-normal";
   src: url("../public/RobotoMono-Regular.ttf");
 }
+
+@font-face {
+  font-family: "marker";
+  src: url("../public/PermanentMarker-Regular.ttf");
+}

@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, chart } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { isPortuguese } from "../atoms/index";
+import { isPortuguese, isNormal, isValid, loading } from "../atoms/index";
 
 function Header() {
   const [br, setBr] = useRecoilState(isPortuguese);
+  const [normal, setNormal] = useRecoilState(isNormal);
+  const [valid, setValid] = useRecoilState(isValid);
+  const [load, setLoad] = useRecoilState(loading);
 
   const toggleLanguage = () => {
     setBr((current) => !current);
-    console.log(br);
   };
 
   return (
     <div className="flex py-3 justify-between sticky top-0 z-50 bg-[#1E1E1E] font-robotoRegular">
-      <div className="flex  bg-[#682ae9] justify-center items-center font-robotoBold text-white rounded-full px-4 h-[26px] sm:h-10">
+      <div className="flex  bg-[#7F00FF] justify-center items-center font-robotoBold text-white rounded-full px-4 h-[26px] sm:h-10">
         <h1 className="">C B S</h1>
       </div>
       <div className="flex gap-2 sm:gap-3 ">
@@ -23,7 +25,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          <FaLinkedin className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#682ae9]" />
+          <FaLinkedin className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#7F00FF]" />
         </a>
         <a
           className="cursor-pointer"
@@ -31,7 +33,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          <FaGithub className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#682ae9]" />
+          <FaGithub className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#7F00FF]" />
         </a>
 
         <input

@@ -1,15 +1,29 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRecoilState } from "recoil";
-import { isValid, isTwoClosed, isPortuguese } from "../atoms/index";
+import {
+  isValid,
+  isTwoClosed,
+  isPortuguese,
+  isNormal,
+  loading,
+  isTxtClosed,
+} from "../atoms/index";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { tabs_br } from "../constants/ptBR";
 import { tabs_us } from "../constants/enUS";
-import { AiOutlineReload } from "react-icons/ai";
+import { AiOutlineReload, AiFillFileText } from "react-icons/ai";
 
-function Terminal({}) {
+import Notepad from "./Notepad";
+
+function Terminal() {
   const [tabTwoClosed, setTabTwoClosed] = useRecoilState(isTwoClosed);
+  const [txtClosed, setTxtClosed] = useRecoilState(isTxtClosed);
+  const [normal, setNormal] = useRecoilState(isNormal);
+  const [load, setLoad] = useRecoilState(loading);
+
   const [br, setBr] = useRecoilState(isPortuguese);
   const [valid, setValid] = useRecoilState(isValid);
 
@@ -36,9 +50,17 @@ function Terminal({}) {
     setText("");
   };
 
+  const closeTxt = () => {
+    setTxtClosed(false);
+  };
+
   const reload = () => {
-    setTabOneClosed(false);
-    setTabTwoClosed(false);
+    if (!normal) {
+      setTabOneClosed(false);
+      setTabTwoClosed(false);
+    } else {
+      setTxtClosed(true);
+    }
   };
 
   const onSubmit = (e) => {
@@ -55,6 +77,7 @@ function Terminal({}) {
         setText("Invalid command..");
       }, 2500);
     }
+    setLoad(false);
   };
 
   return (
@@ -63,8 +86,25 @@ function Terminal({}) {
         <div className="rounded-lg">
           <div className="bg-[#202327] flex p-1 h-10 items-center">
             <div
+              className={`${
+                !normal || !txtClosed ? "hidden" : "flex"
+              } items-center bg-[#15181E] p-1 px-3`}
+            >
+              <div className={` flex justify-center items-center gap-4`}>
+                <div className="flex justify-center items-center gap-1">
+                  <AiFillFileText className="text-white w-4 h-4" />
+                  <h1 className="text-white font-robotoBold ">
+                    {br ? "meuresumo" : "myresume"}.txt
+                  </h1>
+                </div>
+                <button className={`text-white`} onClick={closeTxt}>
+                  x
+                </button>
+              </div>
+            </div>
+            <div
               className={`${!server ? "bg-[#15181E]" : ""} ${
-                tabOneClosed ? "hidden" : "flex"
+                tabOneClosed || normal ? "hidden" : "flex"
               } justify-center items-center p-1 gap-3 border-gray-400 mr-1 px-3 cursor-pointer w-34 sm:w-36`}
               onClick={toggleServer}
             >
@@ -88,7 +128,7 @@ function Terminal({}) {
             </div>
             <div
               className={`${server ? "bg-[#15181E]" : ""} ${
-                tabTwoClosed ? "hidden" : "flex"
+                tabTwoClosed || normal ? "hidden" : "flex"
               } justify-center items-center p-1 gap-3 px-3 cursor-pointer w-34 sm:w-36`}
               onClick={toggleServer}
             >
@@ -112,13 +152,15 @@ function Terminal({}) {
             </div>
 
             <AiOutlineReload
-              className="ml-auto mx-2 w-5 h-5 text-white cursor-pointer"
+              className={`ml-auto mx-2 w-5 h-5 text-white cursor-pointer`}
               onClick={reload}
             />
           </div>
 
           <div className="flex bg-[#15181E]">
-            <div className="flex flex-col text-sm p-2 sm:p-3 gap-1 text-gray-500">
+            <div
+              className={`flex flex-col text-sm p-2 sm:p-3 gap-1 text-gray-500`}
+            >
               <p>1</p>
               <p>2</p>
               <p>3</p>
@@ -130,7 +172,8 @@ function Terminal({}) {
               <p>9</p>
               <p>10</p>
             </div>
-            {!server && !tabOneClosed && (
+            {normal && <Notepad />}
+            {!server && !tabOneClosed && !normal && (
               <div className="p-2">
                 <h1 className="text-white text-sm sm:text-base">
                   <span className="text-[#4EB4D4]">const</span>{" "}
@@ -163,7 +206,7 @@ function Terminal({}) {
                 </h1>
               </div>
             )}
-            {server && !tabTwoClosed && (
+            {server && !tabTwoClosed && !normal && (
               <div className="p-2">
                 <h1 className="text-white text-sm sm:text-base">
                   <span className="text-[#4EB4D4]">const</span>{" "}
@@ -230,7 +273,7 @@ function Terminal({}) {
           </div>
           <div
             className={`${
-              server && !tabTwoClosed ? "flex-col" : "hidden"
+              server && !tabTwoClosed && !normal ? "flex-col" : "hidden"
             } border-t-[1px] border-gray-400 bg-[#15181E] p-3`}
           >
             <h1 className="text-[#808080] text-sm">Terminal</h1>

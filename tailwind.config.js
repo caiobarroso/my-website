@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         robotoBold: ["Roboto-bold"],
         robotoRegular: ["Roboto-normal"],
+        marker: ["marker"],
       },
     },
   },

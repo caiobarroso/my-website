@@ -8,8 +8,8 @@ function Footer() {
   var text = valid ? "SERVER OK" : "SERVER ERROR";
 
   return (
-    <div className="flex border-t-[1px] border-zinc-500  mb-10 text-zinc-400">
-      <div className="flex items-center justify-center lg:justify-between w-full mt-10 lg:mt-5 gap-2">
+    <div className="flex border-t-[1px] border-zinc-500  mb-5 text-zinc-400">
+      <div className="flex items-center justify-center lg:justify-between mt-5 w-full lg:mt-5 gap-2">
         <div
           className={`flex text-black ${
             valid ? "bg-green-600" : "bg-red-600"
