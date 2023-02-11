@@ -22,12 +22,12 @@ export const skills_us = {
 
 export const experience_us = [
   {
-    title: "Javascript Developer",
+    title: "Software Developer",
     place: "Bean Softwares",
     date: "jul/2022 - current",
   },
   {
-    title: "Javascript Developer",
+    title: "Software Developer",
     place: "alertapromo.com",
     date: "april/2022 - jul/2022",
   },
