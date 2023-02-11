@@ -13,17 +13,19 @@ import {
 } from "../atoms/index";
 import {
   about_br,
-  skills_br,
+  hard_skills_br,
   experience_br,
   education_br,
   projects_br,
+  soft_skills_br,
 } from "../constants/ptBR";
 import {
   about_us,
-  skills_us,
+  hard_skills_us,
   experience_us,
   education_us,
   projects_us,
+  soft_skills_us,
 } from "../constants/enUS";
 import Terminal from "./Terminal";
 import ServerError from "./ServerError";
@@ -36,7 +38,8 @@ function Main() {
   const [br, setBr] = useRecoilState(isPortuguese);
 
   var about = br ? about_br : about_us;
-  var skills = br ? skills_br : skills_us;
+  var hardSkills = br ? hard_skills_br : hard_skills_us;
+  var softSkills = br ? soft_skills_br : soft_skills_us;
   var experience = br ? experience_br : experience_us;
   var education = br ? education_br : education_us;
   var projects = br ? projects_br : projects_us;
@@ -82,20 +85,29 @@ function Main() {
           </div>
           <div className="font-robotoRegular">
             <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-extrabold mt-8 mb-4 font-robotoBold">
-              {br ? "Pricipais" : "Main"} skills
+              {br ? "Hard" : "Hard"} skills
             </h1>
 
-            <div className="flex flex-col lg:flex-row gap-4 text-[1rem] sm:text-lg text-[#808080] leading-6">
-              <h2 className="">{skills.desc}</h2>
-              <div className="hidden lg:flex lg:border-r-[1px] border-zinc-700" />
+            <div className="flex flex-col lg:flex-row gap-6 gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
               <h2 className="">GraphQL, MongoDB, PostgreSQL, Firebase</h2>
-              <div className="hidden lg:flex lg:border-r-[1px] border-zinc-700" />
+
               <h2 className="">
                 JavaScript, CSS, HTML, React, React-native, Next.js, Node.js,
                 Tailwindcss
               </h2>
-              <div className="hidden lg:flex lg:border-r-[1px] border-zinc-700 -ml-8" />
+
               <h2 className="">Docker, Git</h2>
+            </div>
+          </div>
+          <div className="font-robotoRegular">
+            <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-extrabold mt-8 mb-4 font-robotoBold">
+              {br ? "Soft" : "Soft"} skills
+            </h1>
+
+            <div className="flex flex-col lg:flex-row  gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6 lg:w-[90%]">
+              <h2 className="">{softSkills.sec_1}</h2>
+
+              <h2 className="">{softSkills.sec_2}</h2>
             </div>
           </div>
           <div className="font-robotoRegular">
@@ -103,7 +115,7 @@ function Main() {
               {br ? "Experiência profissional" : "Work experience"}
             </h1>
 
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 text-[1rem] sm:text-lg text-[#808080] leading-6">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
               {experience.map((item, index) => (
                 <div key={index}>
                   <h2 className="text-[#7F00FF] font-bold">{item.title}</h2>
@@ -146,7 +158,7 @@ function Main() {
                 <h2 className="text-[#808080]">
                   // {br ? "intermediário" : "intermediate"}
                 </h2>
-                <h2 className="text-[#682ae9] font-bold text-base mt-2">
+                <h2 className="text-[#7F00FF] font-bold text-base mt-2">
                   en-US{" "}
                   <span className="text-[#808080]">
                     {br ? "Inglês" : "English"}

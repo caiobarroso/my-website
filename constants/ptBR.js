@@ -14,13 +14,17 @@ export const tabs_br = [
 ];
 
 export const about_br = {
-  bio: "Eu sou Caio. Sou apaixonado por programação, focado em criar inovações e solucionar problemas. Atualmente graduado em Análise e Desenvolvimento de Sistemas, com ênfase em desenvolvimento web e mobile (NodeJS, React & React-Native).",
+  bio: "Olá, me chamo Caio. Sou apaixonado por programação, e meu foco é em criar inovações e solucionar problemas. Sou graduado em Análise e Desenvolvimento de Sistemas. Hoje atuo com ênfase em desenvolvimento web e mobile (NodeJS, React & React-Native).",
 };
 
-export const skills_br = {
+export const hard_skills_br = {
   desc: "Pensamento estratégico para desenvolvimento de aplicativos móveis e web",
 };
 
+export const soft_skills_br = {
+  sec_1: "Comunicação eficaz, Trabalho em equipe, Adaptabilidade, Criatividade",
+  sec_2: "Solução de problemas, Aprendizado rápido, Organização",
+};
 export const experience_br = [
   {
     title: "Software Developer",

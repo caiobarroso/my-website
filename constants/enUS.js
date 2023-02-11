@@ -13,11 +13,16 @@ export const tabs_us = [
 ];
 
 export const about_us = {
-  bio: "I'm Caio. I'm passionate about programming, focused on creating inovations and problem solving. Currently graduate in Systems Analysis and Development, with emphasis on web and mobile development (NodeJS, React & React-Native).",
+  bio: "Hello, my name is Gaius. I am passionate about programming, and my focus is on creating innovations and solving problems. I have a degree in Systems Analysis and Development. Today I work with an emphasis on web and mobile development (NodeJS, React & React-Native).",
 };
 
-export const skills_us = {
+export const hard_skills_us = {
   desc: "Web and mobile app clean architeture, Strategic thinking",
+};
+
+export const soft_skills_us = {
+  sec_1: "Effective Communication, Teamwork, Adaptability, Creativity",
+  sec_2: "Troubleshooting, Quick Learning, Organization",
 };
 
 export const experience_us = [
