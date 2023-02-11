@@ -81,7 +81,7 @@ function ServerError() {
         <span>)</span>
       </h1>
       <button
-        className="cursor-pointer bg-gray-300 rounded-md px-4 py-1 mt-4 border-[1px] border-black ${style} shadow-[4px_4px_0px_rgb(0,0,0)] "
+        className="animate-bounce cursor-pointer bg-gray-300 rounded-md px-4 py-1 mt-4 border-[1px] border-black ${style} shadow-[4px_4px_0px_rgb(0,0,0)] "
         onClick={toggleNormal}
       >
         {br ? "não encontrou um dev ?" : "didn't find a dev ?"}
