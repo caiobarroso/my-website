@@ -70,7 +70,7 @@ function Main() {
                     <FaDownload className="w-3 h-3" />
                   </a>
                 </div>
-                <h2 className="text-[#7F00FF] text-[1rem] sm:text-lg leading-6 lg:w-[70%] mt-4">
+                <h2 className="text-[#0e76a8] text-[1rem] sm:text-lg leading-6 lg:w-[70%] mt-4">
                   {about.bio}
                 </h2>
               </div>
@@ -118,7 +118,7 @@ function Main() {
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
               {experience.map((item, index) => (
                 <div key={index}>
-                  <h2 className="text-[#7F00FF] font-bold">{item.title}</h2>
+                  <h2 className="text-[#0e76a8] font-bold">{item.title}</h2>
                   <h2 className="">@ {item.place}</h2>
                   <p className="text-sm">{item.date}</p>
                 </div>
@@ -132,7 +132,7 @@ function Main() {
             </h1>
 
             <div className="text-[1rem] sm:text-lg">
-              <h2 className="text-[#7F00FF] font-bold">
+              <h2 className="text-[#0e76a8] font-bold">
                 2019-2023 • {education.university}
               </h2>
               <h2 className="text-[#808080]">{education.description}</h2>
@@ -147,7 +147,7 @@ function Main() {
                 <h2 className="text-[#808080]">
                   // {br ? "fluente" : "fluent"}
                 </h2>
-                <h2 className="text-[#7F00FF] font-bold text-base mt-2">
+                <h2 className="text-[#0e76a8] font-bold text-base mt-2">
                   pt-BR{" "}
                   <span className="text-[#808080]">
                     {br ? "Português" : "Portuguese"}
@@ -158,7 +158,7 @@ function Main() {
                 <h2 className="text-[#808080]">
                   // {br ? "intermediário" : "intermediate"}
                 </h2>
-                <h2 className="text-[#7F00FF] font-bold text-base mt-2">
+                <h2 className="text-[#0e76a8] font-bold text-base mt-2">
                   en-US{" "}
                   <span className="text-[#808080]">
                     {br ? "Inglês" : "English"}
@@ -180,7 +180,7 @@ function Main() {
                 >
                   <div className="flex flex-col">
                     <a
-                      className="flex hover:underline font-robotoBold text-[#7F00FF]"
+                      className="flex hover:underline font-robotoBold text-[#0e76a8]"
                       href={item.link}
                       target="_blank"
                       rel="noreferrer"
