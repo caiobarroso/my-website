@@ -61,7 +61,7 @@ function Main() {
                     {br ? "Baixe meu" : "Download my"}
                   </p>
                   <a
-                    className="flex text-center bg-[#7F00FF] px-4 rounded-full text-white justify-center items-center gap-2 text-sm"
+                    className="flex text-center bg-[#0e76a8] px-4 rounded-full text-white justify-center items-center gap-2 text-sm"
                     href="https://drive.google.com/file/d/1mXcYBNCXnx4VAXCcYMU_JcqzFShXptAl/view?usp=sharing"
                     target="_blank"
                     rel="noreferrer"
