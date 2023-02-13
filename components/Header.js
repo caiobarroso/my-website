@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <div className="flex py-3 justify-between sticky top-0 z-50 bg-[#1E1E1E] font-robotoRegular">
-      <div className="flex  bg-[#7F00FF] justify-center items-center font-robotoBold text-white rounded-full px-4 h-[26px] sm:h-10">
+      <div className="flex  bg-[#0e76a8] justify-center items-center font-robotoBold text-white rounded-full px-4 h-[26px] sm:h-10">
         <h1 className="">C B S</h1>
       </div>
       <div className="flex gap-2 sm:gap-3 ">
@@ -25,7 +25,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          <FaLinkedin className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#7F00FF]" />
+          <FaLinkedin className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#0e76a8]" />
         </a>
         <a
           className="cursor-pointer"
@@ -33,7 +33,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          <FaGithub className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#7F00FF]" />
+          <FaGithub className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#0e76a8]" />
         </a>
 
         <input
