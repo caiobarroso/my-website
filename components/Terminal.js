@@ -189,9 +189,7 @@ function Terminal() {
                 <h1 className="text-sm sm:text-base text-white mt-1 sm:mt-[1.5px]">
                   <span className="text-[#4EB4D4]">const</span>{" "}
                   <span className="text-[#4FC1FF]">job</span> ={" "}
-                  <span className="text-[#CE9178]">
-                    'Software Developer'
-                  </span>
+                  <span className="text-[#CE9178]">'Software Developer'</span>
                 </h1>
                 <h1 className="text-sm sm:text-base text-white mt-1 sm:mt-[1.5px]">
                   <span className="text-[#4EB4D4]">const</span>{" "}
@@ -278,7 +276,7 @@ function Terminal() {
           >
             <h1 className="text-[#808080] text-sm">Terminal</h1>
             <div className="flex items-center mt-2 gap-1 ">
-              <p className="text-white text-xs sm:text-sm font-robotoRegular mt-[1px]">
+              <p className="text-white text-xs sm:text-sm font-robotoRegular mt-[2px] sm:mt-[1px]">
                 E:\programs\next\resume&gt;
               </p>
               <form onSubmit={onSubmit}>
