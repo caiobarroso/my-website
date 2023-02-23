@@ -4,14 +4,15 @@ import { FaExclamationTriangle } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
-import { isPortuguese, isNormal, isValid } from "../atoms/index";
+import { isPortuguese, isNormal, isValid } from "@atoms";
 import Image from "next/image";
 
 function ServerError() {
   const [br, setBr] = useRecoilState(isPortuguese);
-  const [load, setLoad] = useState(false);
   const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
+
+  const [load, setLoad] = useState(false);
 
   const [callUs, c] = useTypewriter({
     words: ["saint", "dev**"],

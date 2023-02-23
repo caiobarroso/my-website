@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCircle } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { isValid } from "../atoms/index";
+import { isValid } from "@atoms";
 
 function Footer() {
   const [valid, setValid] = useRecoilState(isValid);

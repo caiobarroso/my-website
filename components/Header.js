@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaLinkedin, FaGithub, chart } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { isPortuguese, isNormal, isValid, loading } from "../atoms/index";
+import { isPortuguese, isNormal, isValid, loading } from "@atoms";
 
 function Header() {
   const [br, setBr] = useRecoilState(isPortuguese);

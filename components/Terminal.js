@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useRecoilState } from "recoil";
 import {
@@ -10,9 +10,9 @@ import {
   isNormal,
   loading,
   isTxtClosed,
-} from "../atoms/index";
-import { tabs_br } from "../constants/ptBR";
-import { tabs_us } from "../constants/enUS";
+} from "@atoms";
+import { tabs_br } from "@constants/ptBR";
+import { tabs_us } from "@constants/enUS";
 import { AiOutlineReload, AiFillFileText } from "react-icons/ai";
 
 import Notepad from "./Notepad";
@@ -23,7 +23,6 @@ function Terminal() {
   const [txtClosed, setTxtClosed] = useRecoilState(isTxtClosed);
   const [normal, setNormal] = useRecoilState(isNormal);
   const [load, setLoad] = useRecoilState(loading);
-
   const [br, setBr] = useRecoilState(isPortuguese);
   const [valid, setValid] = useRecoilState(isValid);
 

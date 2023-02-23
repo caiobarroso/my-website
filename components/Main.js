@@ -1,16 +1,9 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
-import React, { use, useState, useCallback, useEffect } from "react";
+import React from "react";
 import { FaDownload, FaLink } from "react-icons/fa";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useRecoilState } from "recoil";
-import {
-  isValid,
-  isTwoClosed,
-  isPortuguese,
-  isNormal,
-  loading,
-} from "../atoms/index";
+import { isValid, isTwoClosed, isPortuguese, isNormal, loading } from "@atoms";
 import {
   about_br,
   hard_skills_br,
@@ -18,7 +11,7 @@ import {
   education_br,
   projects_br,
   soft_skills_br,
-} from "../constants/ptBR";
+} from "@constants/ptBR";
 import {
   about_us,
   hard_skills_us,
@@ -26,9 +19,9 @@ import {
   education_us,
   projects_us,
   soft_skills_us,
-} from "../constants/enUS";
-import Terminal from "./Terminal";
-import ServerError from "./ServerError";
+} from "@constants/enUS";
+import Terminal from "@components/Terminal";
+import ServerError from "@components/ServerError";
 
 function Main() {
   const [normal, setNormal] = useRecoilState(isNormal);
@@ -38,7 +31,6 @@ function Main() {
   const [br, setBr] = useRecoilState(isPortuguese);
 
   var about = br ? about_br : about_us;
-  var hardSkills = br ? hard_skills_br : hard_skills_us;
   var softSkills = br ? soft_skills_br : soft_skills_us;
   var experience = br ? experience_br : experience_us;
   var education = br ? education_br : education_us;
@@ -88,7 +80,7 @@ function Main() {
               {br ? "Hard" : "Hard"} skills
             </h1>
 
-            <div className="flex flex-col lg:flex-row gap-6 gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
               <h2 className="">GraphQL, MongoDB, PostgreSQL, Firebase</h2>
 
               <h2 className="">

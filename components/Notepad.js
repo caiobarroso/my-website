@@ -1,7 +1,7 @@
 import React from "react";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
 import { useRecoilState } from "recoil";
-import { isPortuguese, isTxtClosed } from "../atoms/index";
+import { isPortuguese, isTxtClosed } from "@atoms";
 
 function Notepad() {
   const [br, setBr] = useRecoilState(isPortuguese);
