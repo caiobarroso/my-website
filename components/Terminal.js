@@ -11,12 +11,12 @@ import {
   loading,
   isTxtClosed,
 } from "../atoms/index";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { tabs_br } from "../constants/ptBR";
 import { tabs_us } from "../constants/enUS";
 import { AiOutlineReload, AiFillFileText } from "react-icons/ai";
 
 import Notepad from "./Notepad";
+import Codeblock from "./Codeblock";
 
 function Terminal() {
   const [tabTwoClosed, setTabTwoClosed] = useRecoilState(isTwoClosed);
@@ -79,6 +79,24 @@ function Terminal() {
     }
     setLoad(false);
   };
+
+  const aboutTab = `const resume = require("resume");
+
+const name = "Caio Barroso 👋";
+const job = "Software Developer";
+const focusedOn = ["${tabs[0].focusedOn[0]}","${tabs[0].focusedOn[1]}"];
+`;
+
+  const serverTab = `const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 4000;
+
+// -> -> ${br ? "algumas rotas de API aqui" : "some API routes here"} <- <-
+app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
+
+// ${tabs[1].comment_one}
+// ${tabs[1].comment_two}
+  `;
 
   return (
     <div className="flex gap-4 mt-8">
@@ -158,115 +176,12 @@ function Terminal() {
           </div>
 
           <div className="flex bg-[#15181E]">
-            <div
-              className={`flex flex-col text-sm p-2 sm:p-3 gap-1 text-gray-500`}
-            >
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p>
-              <p>10</p>
-            </div>
             {normal && <Notepad />}
             {!server && !tabOneClosed && !normal && (
-              <div className="p-2">
-                <h1 className="text-white text-sm sm:text-base">
-                  <span className="text-[#4EB4D4]">const</span>{" "}
-                  <span className="text-[#4FC1FF]">resume</span> ={" "}
-                  <span className="text-[#DCDCAA]">require</span>(
-                  <span className="text-[#CE9178]">'resume'</span>)
-                </h1>
-                <h1 className="text-white text-sm sm:text-base mt-7 sm:mt-6">
-                  <span className="text-[#4EB4D4]">const</span>{" "}
-                  <span className="text-[#4FC1FF]">name</span> ={" "}
-                  <span className="text-[#CE9178]">'{tabs[0].name} 👋'</span>
-                </h1>
-                <h1 className="text-sm sm:text-base text-white mt-1 sm:mt-[1.5px]">
-                  <span className="text-[#4EB4D4]">const</span>{" "}
-                  <span className="text-[#4FC1FF]">job</span> ={" "}
-                  <span className="text-[#CE9178]">'Software Developer'</span>
-                </h1>
-                <h1 className="text-sm sm:text-base text-white mt-1 sm:mt-[1.5px]">
-                  <span className="text-[#4EB4D4]">const</span>{" "}
-                  <span className="text-[#4FC1FF]">focusedOn</span> ={" "}
-                  <span className="text-[#CE9178]">
-                    <span className="text-[#C586C0]">[</span> '
-                    {tabs[0].focusedOn[0]}'
-                    <span className="text-white"> , </span>'
-                    {tabs[0].focusedOn[1]}'
-                    <span className="text-[#C586C0]"> ]</span>
-                  </span>
-                </h1>
-              </div>
+              <Codeblock code={aboutTab} />
             )}
             {server && !tabTwoClosed && !normal && (
-              <div className="p-2">
-                <h1 className="text-white text-sm sm:text-base">
-                  <span className="text-[#4EB4D4]">const</span>{" "}
-                  <span className="text-[#DCDCAA]">express</span> ={" "}
-                  <span className="text-[#DCDCAA]">require</span>(
-                  <span className="text-[#CE9178]">'express'</span>);
-                </h1>
-                <h1 className="text-white text-sm sm:text-base">
-                  <span className="text-[#4EB4D4]">const</span>{" "}
-                  <span className="text-[#4FC1FF]">app</span> ={" "}
-                  <span className="text-[#DCDCAA]">express();</span>
-                </h1>
-
-                <h1 className="text-sm sm:text-base text-white mt-2 sm:mt-6">
-                  <span className="text-[#4EB4D4]">const</span>{" "}
-                  <span className="text-[#4FC1FF]">PORT</span> ={" "}
-                  <span className="text-[#4FC1FF]">
-                    process.env.<span className="text-[#4EB4D4]">PORT</span>{" "}
-                    <span className="text-white">| |</span> 4000
-                  </span>
-                </h1>
-                <h1 className="flex flex-col text-sm sm:text-base mt-1 sm:mt-[1.5px]">
-                  <span className="text-[#99CD7C]">
-                    // -&gt; -&gt;{" "}
-                    {br ? "algumas rotas de API aqui" : "some API routes here"}{" "}
-                    &lt;- &lt;-
-                  </span>
-                </h1>
-                <h1 className="text-sm sm:text-base text-white mt-1 sm:mt-[22px]">
-                  <span className="text-[#4EB4D4]">app</span>
-                  <span className="text-[#DCDCAA]">.listen(</span>{" "}
-                  <span className="text-[#4FC1FF]">
-                    PORT <span className="text-white">,</span>{" "}
-                    <span className="text-[#C586C0]">()</span>
-                    <span>
-                      {" "}
-                      =&gt; <span className="text-[#C586C0]">{"{"}</span>{" "}
-                    </span>
-                    <span className="text-[#CE9178]">
-                      {" "}
-                      <span className="text-[#4EB4D4]">
-                        console<span className="text-[#DCDCAA]">.log</span>
-                      </span>
-                      <span className="text-[#4EB4D4]">(</span>"Listening
-                      Server, on PORT: "{" "}
-                      <span className="text-[#4EB4D4]">+ PORT</span>{" "}
-                      <span className="text-[#4EB4D4]">)</span>
-                      <span className="text-[#C586C0]">{"}"}</span>
-                      <span className="text-[#DCDCAA]">)</span>
-                    </span>
-                  </span>
-                </h1>
-
-                <h1 className="flex flex-col text-sm sm:text-base mt-2 sm:mt-6">
-                  <span className="text-[#99CD7C]">
-                    // {tabs[1].comment_one}
-                  </span>
-                  <span className="text-[#99CD7C] mt-2 sm:mt-0">
-                    // {tabs[1].comment_two}
-                  </span>
-                </h1>
-              </div>
+              <Codeblock code={serverTab} />
             )}
           </div>
           <div

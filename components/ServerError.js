@@ -33,7 +33,7 @@ function ServerError() {
     setTimeout(() => {
       setValid(true);
       setLoad(false);
-    }, 12500);
+    }, 14000);
   };
 
   if (load) {

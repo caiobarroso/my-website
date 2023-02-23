@@ -1,12 +1,7 @@
 import Head from "next/head";
-import { useEffect } from "react";
 import Main from "../components/Main";
 
 export default function Home() {
-  // useEffect(() => {
-  //   localStorage.setItem("isNormal", false);
-  // }, []);
-
   return (
     <div className="">
       <Head>
