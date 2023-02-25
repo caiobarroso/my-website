@@ -15,7 +15,11 @@ import { tabs_br } from "@constants/ptBR";
 import { tabs_us } from "@constants/enUS";
 import Notepad from "@components/Notepad";
 import Codeblock from "@components/Codeblock";
-import { AiOutlineReload, AiFillFileText } from "react-icons/ai";
+import {
+  AiOutlineReload,
+  AiFillFileText,
+  AiOutlineBlock,
+} from "react-icons/ai";
 
 function Terminal() {
   const [tabTwoClosed, setTabTwoClosed] = useRecoilState(isTwoClosed);
@@ -113,7 +117,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                     {br ? "meuresumo" : "myresume"}.txt
                   </h1>
                 </div>
-                <button className={`text-white`} onClick={closeTxt}>
+                <button className={`text-white `} onClick={closeTxt}>
                   x
                 </button>
               </div>
