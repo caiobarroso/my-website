@@ -6,7 +6,6 @@ import { useRecoilState } from "recoil";
 import { isValid, isTwoClosed, isPortuguese, isNormal, loading } from "@atoms";
 import {
   about_br,
-  hard_skills_br,
   experience_br,
   education_br,
   projects_br,
@@ -14,7 +13,6 @@ import {
 } from "@constants/ptBR";
 import {
   about_us,
-  hard_skills_us,
   experience_us,
   education_us,
   projects_us,
@@ -54,7 +52,11 @@ function Main() {
                   </p>
                   <a
                     className="flex text-center bg-[#0e76a8] px-4 rounded-full text-white justify-center items-center gap-2 text-sm"
-                    href="https://drive.google.com/file/d/1mXcYBNCXnx4VAXCcYMU_JcqzFShXptAl/view?usp=sharing"
+                    href={
+                      br
+                        ? "https://drive.google.com/file/d/1mXcYBNCXnx4VAXCcYMU_JcqzFShXptAl/view?usp=sharing"
+                        : "https://drive.google.com/file/d/1Xm0kQFAOBxZAmql5U1HPC3TMQy0XSTrT/view?usp=sharing"
+                    }
                     target="_blank"
                     rel="noreferrer"
                   >

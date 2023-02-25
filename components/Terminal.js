@@ -13,10 +13,9 @@ import {
 } from "@atoms";
 import { tabs_br } from "@constants/ptBR";
 import { tabs_us } from "@constants/enUS";
+import Notepad from "@components/Notepad";
+import Codeblock from "@components/Codeblock";
 import { AiOutlineReload, AiFillFileText } from "react-icons/ai";
-
-import Notepad from "./Notepad";
-import Codeblock from "./Codeblock";
 
 function Terminal() {
   const [tabTwoClosed, setTabTwoClosed] = useRecoilState(isTwoClosed);

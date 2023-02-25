@@ -1,4 +1,4 @@
-export const tabs_br = [
+const tabs_br = [
   {
     tab: "sobreMim",
     name: "Olá, eu sou Caio Barroso!",
@@ -13,15 +13,15 @@ export const tabs_br = [
   },
 ];
 
-export const about_br = {
+const about_br = {
   bio: "Olá, me chamo Caio. Sou apaixonado por programação, e meu foco é em criar inovações e solucionar problemas. Sou graduado em Análise e Desenvolvimento de Sistemas. Hoje atuo com ênfase em desenvolvimento web e mobile (NodeJS, React & React-Native).",
 };
 
-export const soft_skills_br = {
+const soft_skills_br = {
   sec_1: "Comunicação eficaz, Trabalho em equipe, Adaptabilidade, Criatividade",
   sec_2: "Solução de problemas, Aprendizado rápido, Organização",
 };
-export const experience_br = [
+const experience_br = [
   {
     title: "Software Developer",
     place: "Bean Softwares",
@@ -44,12 +44,12 @@ export const experience_br = [
   },
 ];
 
-export const education_br = {
+const education_br = {
   university: "Universidade de Fortaleza (UNIFOR)",
   description: "Tecnólogo, Análise e Desenvolvimento de Sistemas",
 };
 
-export const projects_br = [
+const projects_br = [
   {
     img: "/Frame22.png",
     link: "https://poco-da-draga.vercel.app/",
@@ -59,3 +59,12 @@ export const projects_br = [
     tecnologies: ["Next.js", "Tailwind.css", "Sanity.io"],
   },
 ];
+
+export {
+  tabs_br,
+  about_br,
+  soft_skills_br,
+  experience_br,
+  education_br,
+  projects_br,
+};

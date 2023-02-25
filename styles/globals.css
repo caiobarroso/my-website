@@ -31,7 +31,7 @@
     height: 26px;
     border-radius: 50px;
     transition: all 0.6s;
-    background-color: #73af00;
+    background-color: yellow;
   }
 
   @media screen and (min-width: 640px) {
@@ -44,7 +44,7 @@
       height: 40px;
       border-radius: 50px;
       transition: all 0.6s;
-      background-color: #73af00;
+      background-color: yellow;
     }
   }
 
@@ -56,13 +56,6 @@
     transform: translate(100%);
     transition: all 0.6s;
     background-color: #b21d2e;
-  }
-
-  .react-syntax-highlighter-line-number {
-    position: absolute;
-    left: 0;
-    padding-right: 10px;
-    color: #ccc;
   }
 }
 
