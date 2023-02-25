@@ -117,7 +117,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                     {br ? "meuresumo" : "myresume"}.txt
                   </h1>
                 </div>
-                <button className={`text-white `} onClick={closeTxt}>
+                <button className="text-white" onClick={closeTxt}>
                   x
                 </button>
               </div>

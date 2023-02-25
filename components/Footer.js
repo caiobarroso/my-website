@@ -31,7 +31,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex w-full justify-end">
-          <p className="text-[10px] sm:text-xs tracking-widest">
+          <p className="text-[8px] sm:text-xs tracking-widest">
             DESIGNED & DEVELOPED BY:{" "}
             <a
               className="underline cursor-pointer"
