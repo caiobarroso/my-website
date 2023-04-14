@@ -44,7 +44,7 @@ function Main() {
             <div className="flex justify-center items-center gap-4">
               <div>
                 <p className="text-white text-[3.2rem] sm:text-[4rem] font-robotoBold">
-                  {br ? "Sobre mim." : "About me."}
+                  {br ? "Sobre mim" : "About me"}
                 </p>
                 <div className="flex gap-4">
                   <p className="text-[#808080] text-sm sm:text-base">
