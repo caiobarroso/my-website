@@ -7,12 +7,14 @@ import { isValid, isNormal, language } from "@atoms";
 import Terminal from "@components/Terminal";
 import ServerError from "@components/ServerError";
 import data from "../constants/data.json";
+import Model3d from "./Model3d";
 
 function Main() {
   const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
   const [info, setInfo] = useState(data.ptBR);
   const [lang, setLang] = useRecoilState(language);
+  const [model, setModel] = useState();
 
   useEffect(() => {
     if (lang === "pt-BR") {
@@ -22,7 +24,7 @@ function Main() {
     } else {
       setInfo(data.esES);
     }
-  }, [info, setInfo, lang]);
+  });
 
   const { about, soft_skills, experience, education, projects, languages } =
     info;
@@ -42,31 +44,37 @@ function Main() {
         <div>
           <div className={`flex flex-col font-robotoRegular`}>
             <div className="flex justify-center items-center gap-4">
-              <div>
-                <p className="text-white text-[3.2rem] sm:text-[4rem] font-robotoBold">
-                  {info.about.title}
-                </p>
-                <div className="flex gap-4">
-                  <p className="text-[#808080] text-sm sm:text-base">
-                    {download}
+              <div className="flex">
+                <div>
+                  <p className="text-white text-[3.2rem] sm:text-[4rem] font-robotoBold">
+                    {info.about.title}
                   </p>
-                  <a
-                    className="flex text-center bg-[#0e76a8] px-4 rounded-full text-white justify-center items-center gap-2 text-sm"
-                    href={
-                      lang === "pt-BR"
-                        ? "https://drive.google.com/file/d/1mXcYBNCXnx4VAXCcYMU_JcqzFShXptAl/view?usp=sharing"
-                        : "https://drive.google.com/file/d/1Xm0kQFAOBxZAmql5U1HPC3TMQy0XSTrT/view?usp=sharing"
-                    }
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    CV
-                    <FaDownload className="w-3 h-3" />
-                  </a>
+                  <div className="flex gap-4">
+                    <p className="text-[#808080] text-sm sm:text-base">
+                      {download}
+                    </p>
+                    <a
+                      className="flex text-center bg-[#0e76a8] px-4 rounded-full text-white justify-center items-center gap-2 text-sm"
+                      href={
+                        lang === "pt-BR"
+                          ? "https://drive.google.com/file/d/1mXcYBNCXnx4VAXCcYMU_JcqzFShXptAl/view?usp=sharing"
+                          : "https://drive.google.com/file/d/1Xm0kQFAOBxZAmql5U1HPC3TMQy0XSTrT/view?usp=sharing"
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      CV
+                      <FaDownload className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="flex flex-col sm:flex-row">
+                    <h2 className="text-[#0e76a8] text-[1rem] sm:text-lg leading-6  mt-4">
+                      {about.bio}
+                    </h2>
+
+                    <Model3d />
+                  </div>
                 </div>
-                <h2 className="text-[#0e76a8] text-[1rem] sm:text-lg leading-6 lg:w-[70%] mt-4">
-                  {about.bio}
-                </h2>
               </div>
             </div>
 
