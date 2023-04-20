@@ -1,0 +1,257 @@
+{
+    "enUS": {
+        "error": "Oops... unfortunately we couldn't establish a connection with the server.",
+        "fix": "Wait, we are fixing the server...",
+        "button": "didn't find a dev ? click here!",
+        "tabs": [
+            {
+                "tab": "aboutMe",
+                "name": "Hi, i'm Caio Barroso!",
+                "focusedOn": [
+                    "Web development",
+                    "Mobile development"
+                ]
+            },
+            {
+                "tab": "server",
+                "comment_one": "you need to start the server to run the application properly",
+                "comment_two": "please type in the terminal the following command and hit enter: node server.js"
+            }
+        ],
+        "description": "Hello, my name is Caio Barroso, and I would like to welcome you to my website! Here you will see a little more about me.. Oh, and don't worry about not being able to fix our server, you weren't the only one. But there is always a plan B! Let me solve it for you quickly.. The application will resume in a few moments and you will be able to see the rest of the site.",
+        "about": {
+            "title": "About me",
+            "bio": "Hello, my name is Caio. I am passionate about programming, and my focus is on creating innovations and solving problems. I have a degree in Systems Analysis and Development. Today I work with an emphasis on web and mobile development (NodeJS, React & React-Native)."
+        },
+        "languages": [
+            {
+                "name": "Portuguese",
+                "status": "fluent"
+            },
+            {
+                "name": "English",
+                "status": "intermediate"
+            }
+        ],
+        "soft_skills": {
+            "sec_1": "Effective Communication, Teamwork, Adaptability, Creativity",
+            "sec_2": "Troubleshooting, Quick Learning, Organization"
+        },
+        "experience": {
+            "title": "Work Experience",
+            "items": [
+                {
+                    "title": "Software Developer",
+                    "place": "Bean Softwares",
+                    "date": "jul/2022 - current"
+                },
+                {
+                    "title": "Software Developer",
+                    "place": "alertapromo.com",
+                    "date": "april/2022 - jul/2022"
+                },
+                {
+                    "title": "I.T Intern",
+                    "place": "Cactus Sports Park",
+                    "date": "nov/2020 - feb/2022"
+                },
+                {
+                    "title": "I.T Intern",
+                    "place": "OAB (Ordem dos advogados do Brasil)",
+                    "date": "sep/2020 - nov/2020"
+                }
+            ]
+        },
+        "education": {
+            "title": "Education",
+            "university": "University of Fortaleza (UNIFOR)",
+            "description": "Technologist degree in Analysis And Systems Development"
+        },
+        "projects": {
+            "title": "Projects",
+            "items": [
+                {
+                    "img": "/Frame22.png",
+                    "link": "https://poco-da-draga.vercel.app/",
+                    "title": "Poço da Draga",
+                    "description": "Application created to disseminate stories of residents of a poor community",
+                    "tecnologies": [
+                        "Next.js",
+                        "Tailwind.css",
+                        "Sanity.io"
+                    ]
+                }
+            ]
+        }
+    },
+    "ptBR": {
+        "error": "Ooops.. Infelizmente não conseguimos estabelecer uma conexão com o servidor.",
+        "fix": "Aguarde, estamos retomando o servidor...",
+        "button": "não encontrou um dev ? clique aqui!",
+        "tabs": [
+            {
+                "tab": "sobreMim",
+                "name": "Olá, eu sou Caio Barroso!",
+                "focusedOn": [
+                    "Desenvolvimento Web",
+                    "Desenvolvimento Mobile"
+                ]
+            },
+            {
+                "tab": "server",
+                "comment_one": "você precisa iniciar o servidor para executar o aplicativo corretamente",
+                "comment_two": "digite no terminal o seguinte comando e pressione enter: node server.js"
+            }
+        ],
+        "description": "Olá, meu nome é Caio Barroso, e gostaria de te desejar boas vindas ao meu site! Aqui você verá um pouco mais sobre mim.. Ah, e não se preocupe por não ter conseguido consertar o nosso servidor, você não foi o(a) único(a). Mas sempre existe um plano B! Pode deixar que eu resolvo isso pra você rapidinho.. A aplicação será retomada em poucos instantes e você poderá ver o restante do site.",
+        "about": {
+            "title": "Sobre Mim",
+            "bio": "Olá, me chamo Caio. Sou apaixonado por programação, e meu foco é em criar inovações e solucionar problemas. Sou graduado em Análise e Desenvolvimento de Sistemas. Hoje atuo com ênfase em desenvolvimento web e mobile (NodeJS, React & React-Native)."
+        },
+        "languages": [
+            {
+                "name": "Português",
+                "status": "fluente"
+            },
+            {
+                "name": "Inglês",
+                "status": "intermediário"
+            }
+        ],
+        "soft_skills": {
+            "sec_1": "Comunicação eficaz, Trabalho em equipe, Adaptabilidade, Criatividade",
+            "sec_2": "Solução de problemas, Aprendizado rápido, Organização"
+        },
+        "experience": {
+            "title": "Experiência Profissional",
+            "items": [
+                {
+                    "title": "Software Developer",
+                    "place": "Bean Softwares",
+                    "date": "jul/2022 - atual"
+                },
+                {
+                    "title": "Software Developer",
+                    "place": "alertapromo.com",
+                    "date": "abril/2022 - jul/2022"
+                },
+                {
+                    "title": "Estagiário de T.I",
+                    "place": "Cactus Sports Park",
+                    "date": "nov/2020 - fev/2022"
+                },
+                {
+                    "title": "Estagiário de T.I",
+                    "place": "OAB (Ordem dos advogados do Brasil)",
+                    "date": "set/2020 - nov/2020"
+                }
+            ]
+        },
+        "education": {
+            "title": "Formação acadêmica",
+            "university": "Universidade de Fortaleza (UNIFOR)",
+            "description": "Tecnólogo, Análise e Desenvolvimento de Sistemas"
+        },
+        "projects": {
+            "title": "Projetos",
+            "items": [
+                {
+                    "img": "/Frame22.png",
+                    "link": "https://poco-da-draga.vercel.app/",
+                    "title": "Poço da Draga",
+                    "description": "Aplicação criada para divulgar histórias dos residentes de uma comunidade carente",
+                    "tecnologies": [
+                        "Next.js",
+                        "Tailwind.css",
+                        "Sanity.io"
+                    ]
+                }
+            ]
+        }
+    },
+    "esES": {
+        "error": "Ooops... Desafortunadamente, no pudimos establecer una conexión con el servidor.",
+        "fix": "Espere, estamos reanudando el servidor...",
+        "button": "no encontre uno dev ? Haga clic aquí!",
+        "tabs": [
+            {
+                "tab": "sobreMi",
+                "name": "¡Hola, soy Caio Barroso!",
+                "focusedOn": [
+                    "Desarrollo Web",
+                    "Desarrollo Móvil"
+                ]
+            },
+            {
+                "tab": "server",
+                "comment_one": "necesitas iniciar el servidor para ejecutar la aplicación correctamente",
+                "comment_two": "escribe en la terminal el siguiente comando y presiona enter: node server.js"
+            }
+        ],
+        "description": "¡Hola, mi nombre es Caio Barroso y me gustaría darle la bienvenida a mi sitio web! Aquí podrás ver un poco más sobre mí.. Ah, y no te preocupes por no poder arreglar nuestro servidor, no fuiste el único. ¡Pero siempre hay un plan B! Déjame resolverlo rápidamente. La aplicación se reanudará en unos momentos y podrás ver el resto del sitio.",
+        "about": {
+            "title": "Sobre Mi",
+            "bio": "Hola, mi nombre es Caio. Me apasiona la programación y mi enfoque es crear innovaciones y solucionar problemas. Soy graduado en Análisis y Desarrollo de Sistemas. Actualmente me enfoco en el desarrollo web y móvil (NodeJS, React & React-Native)."
+        },
+        "languages": [
+            {
+                "name": "Português",
+                "status": "fluido"
+            },
+            {
+                "name": "Inglés",
+                "status": "intermediario"
+            }
+        ],
+        "soft_skills": {
+            "sec_1": "Comunicación efectiva, Trabajo en equipo, Adaptabilidad, Creatividad",
+            "sec_2": "Solución de problemas, Aprendizaje rápido, Organización"
+        },
+        "experience": {
+            "title": "Experiencia Profesional",
+            "items": [
+                {
+                    "title": "Software Developer",
+                    "place": "Bean Softwares",
+                    "date": "jul/2022 - actualidad"
+                },
+                {
+                    "title": "Software Developer",
+                    "place": "alertapromo.com",
+                    "date": "abril/2022 - jul/2022"
+                },
+                {
+                    "title": "Becario de TI",
+                    "place": "Cactus Sports Park",
+                    "date": "nov/2020 - feb/2022"
+                },
+                {
+                    "title": "Becario de TI",
+                    "place": "OAB (Ordem dos advogados de Brasil)",
+                    "date": "sep/2020 - nov/2020"
+                }
+            ]
+        },
+        "education": {
+            "title": "Formación Académica",
+            "university": "Universidade de Fortaleza (UNIFOR)",
+            "description": "Tecnólogo, Análisis y Desarrollo de Sistemas"
+        },
+        "projects": {
+            "title": "Proyectos",
+            "items": [
+                {
+                    "img": "/Frame22.png",
+                    "link": "https://poco-da-draga.vercel.app/",
+                    "title": "Poço da Draga",
+                    "description": "Aplicación creada para divulgar historias de los residentes de una comunidad necesitada",
+                    "tecnologies": [
+                        "Next.js",
+                        "Tailwind.css",
+                        "Sanity.io"
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1983,6 +1983,11 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.23.0"
 
+"react-flagkit@^2.0.4":
+  "integrity" "sha512-e0Rak6VG1+KemBFqLqTPzFDLYS40lEW1YOpG9s68WDoEoQiC0YPEXDkIGLorNgP6omJztcg/OtcjSqAKM2O1cw=="
+  "resolved" "https://registry.npmjs.org/react-flagkit/-/react-flagkit-2.0.4.tgz"
+  "version" "2.0.4"
+
 "react-icons@^4.7.1":
   "integrity" "sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.7.1.tgz"
@@ -2014,7 +2019,7 @@
     "prismjs" "^1.27.0"
     "refractor" "^3.6.0"
 
-"react@*", "react@^18.2.0", "react@>= 0.14.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=0.14.0", "react@>=16.13.1", "react@>=18.0.0", "react@18.2.0":
+"react@*", "react@^18.2.0", "react@>= 0.14.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=0.14.0", "react@>=16", "react@>=16.13.1", "react@>=18.0.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

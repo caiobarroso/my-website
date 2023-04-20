@@ -1,42 +1,42 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaDownload, FaLink } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { isValid, isTwoClosed, isPortuguese, isNormal, loading } from "@atoms";
-import {
-  about_br,
-  experience_br,
-  education_br,
-  projects_br,
-  soft_skills_br,
-} from "@constants/ptBR";
-import {
-  about_us,
-  experience_us,
-  education_us,
-  projects_us,
-  soft_skills_us,
-} from "@constants/enUS";
+import { isValid, isNormal, language } from "@atoms";
 import Terminal from "@components/Terminal";
 import ServerError from "@components/ServerError";
+import data from "../constants/data.json";
 
 function Main() {
   const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
-  const [load, setLoad] = useRecoilState(loading);
-  const [tabTwoClosed, setTabTwoClosed] = useRecoilState(isTwoClosed);
-  const [br, setBr] = useRecoilState(isPortuguese);
+  const [info, setInfo] = useState(data.ptBR);
+  const [lang, setLang] = useRecoilState(language);
 
-  var about = br ? about_br : about_us;
-  var softSkills = br ? soft_skills_br : soft_skills_us;
-  var experience = br ? experience_br : experience_us;
-  var education = br ? education_br : education_us;
-  var projects = br ? projects_br : projects_us;
+  useEffect(() => {
+    if (lang === "pt-BR") {
+      setInfo(data.ptBR);
+    } else if (lang === "en-US") {
+      setInfo(data.enUS);
+    } else {
+      setInfo(data.esES);
+    }
+  }, [info, setInfo, lang]);
+
+  const { about, soft_skills, experience, education, projects, languages } =
+    info;
+
+  const download =
+    lang === "pt-BR"
+      ? "Baixe meu"
+      : lang === "en-US"
+      ? "Download my"
+      : "Descargar mi";
 
   return (
     <div className="flex flex-col">
-      <Terminal />
+      <Terminal info={info} />
 
       {(valid && normal) || valid ? (
         <div>
@@ -44,16 +44,16 @@ function Main() {
             <div className="flex justify-center items-center gap-4">
               <div>
                 <p className="text-white text-[3.2rem] sm:text-[4rem] font-robotoBold">
-                  {br ? "Sobre mim." : "About me."}
+                  {info.about.title}
                 </p>
                 <div className="flex gap-4">
                   <p className="text-[#808080] text-sm sm:text-base">
-                    {br ? "Baixe meu" : "Download my"}
+                    {download}
                   </p>
                   <a
                     className="flex text-center bg-[#0e76a8] px-4 rounded-full text-white justify-center items-center gap-2 text-sm"
                     href={
-                      br
+                      lang === "pt-BR"
                         ? "https://drive.google.com/file/d/1mXcYBNCXnx4VAXCcYMU_JcqzFShXptAl/view?usp=sharing"
                         : "https://drive.google.com/file/d/1Xm0kQFAOBxZAmql5U1HPC3TMQy0XSTrT/view?usp=sharing"
                     }
@@ -79,7 +79,7 @@ function Main() {
           </div>
           <div className="font-robotoRegular">
             <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-extrabold mt-8 mb-4 font-robotoBold">
-              {br ? "Hard" : "Hard"} skills
+              Hard skills
             </h1>
 
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
@@ -95,22 +95,22 @@ function Main() {
           </div>
           <div className="font-robotoRegular">
             <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-extrabold mt-8 mb-4 font-robotoBold">
-              {br ? "Soft" : "Soft"} skills
+              Soft skills
             </h1>
 
             <div className="flex flex-col lg:flex-row  gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6 lg:w-[90%]">
-              <h2 className="">{softSkills.sec_1}</h2>
+              <h2 className="">{soft_skills.sec_1}</h2>
 
-              <h2 className="">{softSkills.sec_2}</h2>
+              <h2 className="">{soft_skills.sec_2}</h2>
             </div>
           </div>
           <div className="font-robotoRegular">
             <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-robotoBold mt-8 mb-4">
-              {br ? "Experiência profissional" : "Work experience"}
+              {experience.title}
             </h1>
 
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
-              {experience.map((item, index) => (
+              {experience.items.map((item, index) => (
                 <div key={index}>
                   <h2 className="text-[#0e76a8] font-bold">{item.title}</h2>
                   <h2 className="">@ {item.place}</h2>
@@ -122,7 +122,7 @@ function Main() {
 
           <div className="font-robotoRegular">
             <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-robotoBold mt-8 mb-4">
-              {br ? "Formação acadêmica" : "Education"}
+              {education.title}
             </h1>
 
             <div className="text-[1rem] sm:text-lg">
@@ -134,40 +134,32 @@ function Main() {
           </div>
           <div className="font-robotoRegular">
             <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-robotoBold mt-8 mb-4">
-              {br ? "Idiomas" : "Languages"}
+              {lang !== "en-US" ? "Idiomas" : "Languages"}
             </h1>
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-14">
               <div className="text-[1rem] sm:text-xl">
-                <h2 className="text-[#808080]">
-                  // {br ? "fluente" : "fluent"}
-                </h2>
+                <h2 className="text-[#808080]">// {languages[0].status}</h2>
                 <h2 className="text-[#0e76a8] font-bold text-base mt-2">
                   pt-BR{" "}
-                  <span className="text-[#808080]">
-                    {br ? "Português" : "Portuguese"}
-                  </span>
+                  <span className="text-[#808080]">{languages[0].name}</span>
                 </h2>
               </div>
               <div className="text-[1rem] sm:text-xl">
-                <h2 className="text-[#808080]">
-                  // {br ? "intermediário" : "intermediate"}
-                </h2>
+                <h2 className="text-[#808080]">// {languages[1].status}</h2>
                 <h2 className="text-[#0e76a8] font-bold text-base mt-2">
                   en-US{" "}
-                  <span className="text-[#808080]">
-                    {br ? "Inglês" : "English"}
-                  </span>
+                  <span className="text-[#808080]">{languages[1].name}</span>
                 </h2>
               </div>
             </div>
           </div>
           <div className="font-robotoRegular">
             <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-extrabold mt-8 mb-4 font-robotoBold">
-              {br ? "Projetos" : "Projects"}
+              {projects.title}
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-14 text-[1rem] sm:text-lg text-[#808080] mb-6 ">
-              {projects.map((item, idx) => (
+              {projects.items.map((item, idx) => (
                 <div
                   className="flex gap-3 justify-center items-center"
                   key={idx}
@@ -197,7 +189,7 @@ function Main() {
           </div>
         </div>
       ) : (
-        <ServerError />
+        <ServerError info={info} />
       )}
     </div>
   );

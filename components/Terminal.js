@@ -3,38 +3,22 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useRecoilState } from "recoil";
-import {
-  isValid,
-  isTwoClosed,
-  isPortuguese,
-  isNormal,
-  loading,
-  isTxtClosed,
-} from "@atoms";
-import { tabs_br } from "@constants/ptBR";
-import { tabs_us } from "@constants/enUS";
+import { isValid, isTwoClosed, isNormal, loading, isTxtClosed } from "@atoms";
 import Notepad from "@components/Notepad";
 import Codeblock from "@components/Codeblock";
-import {
-  AiOutlineReload,
-  AiFillFileText,
-  AiOutlineBlock,
-} from "react-icons/ai";
+import { AiOutlineReload, AiFillFileText } from "react-icons/ai";
 
-function Terminal() {
+function Terminal({ info }) {
   const [tabTwoClosed, setTabTwoClosed] = useRecoilState(isTwoClosed);
   const [txtClosed, setTxtClosed] = useRecoilState(isTxtClosed);
   const [normal, setNormal] = useRecoilState(isNormal);
   const [load, setLoad] = useRecoilState(loading);
-  const [br, setBr] = useRecoilState(isPortuguese);
   const [valid, setValid] = useRecoilState(isValid);
 
   const [tabOneClosed, setTabOneClosed] = useState(false);
   const [input, setInput] = useState("");
   const [text, setText] = useState("");
   const [server, setServer] = useState(false);
-
-  var tabs = br ? tabs_br : tabs_us;
 
   const toggleServer = () => {
     if (tabOneClosed || tabTwoClosed) return;
@@ -82,6 +66,8 @@ function Terminal() {
     setLoad(false);
   };
 
+  const { tabs, description } = info;
+
   const aboutTab = `const resume = require("resume");
 
 const name = "Caio Barroso 👋";
@@ -93,7 +79,7 @@ const focusedOn = ["${tabs[0].focusedOn[0]}","${tabs[0].focusedOn[1]}"];
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// -> -> ${br ? "algumas rotas de API aqui" : "some API routes here"} <- <-
+// -> -> some API routes here <- <-
 app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
 
 // ${tabs[1].comment_one}
@@ -113,9 +99,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               <div className={` flex justify-center items-center gap-4`}>
                 <div className="flex justify-center items-center gap-1">
                   <AiFillFileText className="text-white w-4 h-4" />
-                  <h1 className="text-white font-robotoBold ">
-                    {br ? "meuresumo" : "myresume"}.txt
-                  </h1>
+                  <h1 className="text-white font-robotoBold ">myresume.txt</h1>
                 </div>
                 <button className="text-white" onClick={closeTxt}>
                   x
@@ -137,7 +121,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                 className="w-3 h-3"
               />
               <h2 className="text-white text-sm italic font-semibold">
-                {tabs[0].tab}.js
+                {info.tabs[0].tab}.js
               </h2>
               <button
                 className={`${!server ? "flex" : "hidden"} text-white`}
@@ -161,7 +145,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                 className="w-3 h-3"
               />
               <h2 className="text-white text-sm italic font-semibold">
-                {tabs[1].tab}.js
+                {info.tabs[1].tab}.js
               </h2>
               <span
                 className={`${server ? "flex" : "hidden"} text-white`}
@@ -178,7 +162,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
           </div>
 
           <div className="flex bg-[#15181E]">
-            {normal && <Notepad />}
+            {normal && <Notepad text={description} />}
             {!server && !tabOneClosed && !normal && (
               <Codeblock code={aboutTab} />
             )}

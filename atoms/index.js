@@ -1,8 +1,8 @@
 import { atom } from "recoil";
 
-export const isPortuguese = atom({
-  key: "portuguese",
-  default: true,
+export const language = atom({
+  key: "lang",
+  default: "pt-BR",
 });
 
 export const isValid = atom({

@@ -4,11 +4,10 @@ import { FaExclamationTriangle } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
-import { isPortuguese, isNormal, isValid } from "@atoms";
+import { isNormal, isValid } from "@atoms";
 import Image from "next/image";
 
-function ServerError() {
-  const [br, setBr] = useRecoilState(isPortuguese);
+function ServerError({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
 
@@ -16,13 +15,6 @@ function ServerError() {
 
   const [callUs, c] = useTypewriter({
     words: ["saint", "dev**"],
-    delaySpeed: 3000,
-    loop: true,
-    typeSpeed: 70,
-  });
-
-  const [callBr, d] = useTypewriter({
-    words: ["santo", "dev**"],
     delaySpeed: 3000,
     loop: true,
     typeSpeed: 70,
@@ -42,9 +34,7 @@ function ServerError() {
       <div className="flex flex-col justify-center items-center py-16 text-center">
         <ReactLoading type="spokes" color="white" height={50} width={50} />
         <h1 className="text-white font-robotoRegular mt-4">
-          {br
-            ? "Aguarde, estamos retomando o servidor..."
-            : "Wait, we are fixing the server..."}
+          {info.fix}
           <Cursor cursorColor="white" />
         </h1>
       </div>
@@ -62,9 +52,7 @@ function ServerError() {
         className="mb-4"
       />
       <h1 className="font-robotoBold text-white text-base sm:text-2xl sm:w-1/2">
-        {br
-          ? "Ooops.. Infelizmente não conseguimos estabelecer uma conexão com o servidor."
-          : "Oops... unfortunately we couldn't establish a connection with the server."}{" "}
+        {info.error}
       </h1>
       <div className="flex justify-center items-center mt-4 gap-3">
         <FaExclamationTriangle className="text-yellow-300" />
@@ -76,17 +64,16 @@ function ServerError() {
       <h1 className="text-[#C586C0] mt-3 text-sm">
         <span>(</span>
         <span className="text-[#CE9178]">
-          "{br ? `chame um ${callBr}` : `call a ${callUs}`}
+          "{`call a ${callUs}`}
           <Cursor cursorColor="white" />"
         </span>
         <span>)</span>
       </h1>
       <button
-        className="animate-bounce cursor-pointer bg-gray-300 rounded-md px-4 py-1 mt-4 border-[1px] border-black ${style} shadow-[4px_4px_0px_rgb(0,0,0)] text-xs sm:text-sm"
+        className="animate-bounce cursor-pointer bg-gray-300 rounded-md px-4 py-1 mt-4 border-[1px] border-black ${style} shadow-[4px_4px_0px_rgb(0,0,0)] text-xs sm:text-sm max-w-[14rem]"
         onClick={toggleNormal}
       >
-        {br ? "não encontrou um dev ?" : "didn't find a dev ?"} <br />
-        {br ? "clique aqui!" : "click here!"}
+        {info.button}
       </button>
     </div>
   );
