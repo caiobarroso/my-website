@@ -6,7 +6,6 @@ import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
 import { isNormal, isValid } from "@atoms";
 import Image from "next/image";
-import Model3d from "./Model3d";
 
 function ServerError({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);

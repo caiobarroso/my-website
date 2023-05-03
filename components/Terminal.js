@@ -6,7 +6,11 @@ import { useRecoilState } from "recoil";
 import { isValid, isTwoClosed, isNormal, loading, isTxtClosed } from "@atoms";
 import Notepad from "@components/Notepad";
 import Codeblock from "@components/Codeblock";
-import { AiOutlineReload, AiFillFileText } from "react-icons/ai";
+import {
+  AiOutlineReload,
+  AiFillFileText,
+  AiOutlineClose,
+} from "react-icons/ai";
 
 function Terminal({ info }) {
   const [tabTwoClosed, setTabTwoClosed] = useRecoilState(isTwoClosed);
@@ -101,58 +105,61 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                   <AiFillFileText className="text-white w-4 h-4" />
                   <h1 className="text-white font-robotoBold ">myresume.txt</h1>
                 </div>
-                <button className="text-white" onClick={closeTxt}>
-                  x
-                </button>
+                <AiOutlineClose
+                  className="text-white text-sm"
+                  onClick={closeTxt}
+                />
               </div>
             </div>
             <div
               className={`${!server ? "bg-[#15181E]" : ""} ${
                 tabOneClosed || normal ? "hidden" : "flex"
-              } justify-center items-center p-1 gap-3 border-gray-400 mr-1 px-3 cursor-pointer w-34 sm:w-36`}
+              } justify-between items-center p-1 gap-3 border-gray-400 mr-1 px-3 cursor-pointer w-34 sm:w-36`}
               onClick={toggleServer}
             >
-              <Image
-                src="/logo.svg"
-                alt="..."
-                width={3}
-                height={3}
-                priority={true}
-                className="w-3 h-3"
-              />
-              <h2 className="text-white text-sm italic font-semibold">
-                {info.tabs[0].tab}.js
-              </h2>
-              <button
-                className={`${!server ? "flex" : "hidden"} text-white`}
+              <div className="flex justify-center items-center gap-2">
+                <Image
+                  src="/logo.svg"
+                  alt="..."
+                  width={3}
+                  height={3}
+                  priority={true}
+                  className="w-3 h-3"
+                />
+                <h2 className="text-white text-sm italic font-semibold">
+                  {info.tabs[0].tab}.js
+                </h2>
+              </div>
+
+              <AiOutlineClose
+                className={`${!server ? "flex" : "hidden"} text-white text-sm`}
                 onClick={closeTabOne}
-              >
-                x
-              </button>
+              />
             </div>
             <div
               className={`${server ? "bg-[#15181E]" : ""} ${
                 tabTwoClosed || normal ? "hidden" : "flex"
-              } justify-center items-center p-1 gap-3 px-3 cursor-pointer w-34 sm:w-36`}
+              } justify-between items-center p-1 gap-3 px-3 cursor-pointer w-34 sm:w-36`}
               onClick={toggleServer}
             >
-              <Image
-                src="/logo.svg"
-                alt="..."
-                width={3}
-                height={3}
-                priority={true}
-                className="w-3 h-3"
-              />
-              <h2 className="text-white text-sm italic font-semibold">
-                {info.tabs[1].tab}.js
-              </h2>
-              <span
-                className={`${server ? "flex" : "hidden"} text-white`}
+              <div className="flex justify-center items-center gap-2">
+                <Image
+                  src="/logo.svg"
+                  alt="..."
+                  width={3}
+                  height={3}
+                  priority={true}
+                  className="w-3 h-3"
+                />
+                <h2 className="text-white text-sm italic font-semibold">
+                  {info.tabs[1].tab}.js
+                </h2>
+              </div>
+
+              <AiOutlineClose
+                className={`${server ? "flex" : "hidden"} text-white text-sm`}
                 onClick={closeTabTwo}
-              >
-                x
-              </span>
+              />
             </div>
 
             <AiOutlineReload
