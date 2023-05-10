@@ -60,16 +60,29 @@ function Header() {
         <div className="font-medium cursor-pointer w-28 select-none">
           <div
             onClick={() => setOpen(!open)}
-            className={`flex bg-transparent text-white items-center h-[26px] sm:h-10 text-xs sm:text-sm justify-center font-semibold ${
-              !selected && "text-gray-700"
-            }`}
+            className={`
+            ${!selected && "text-gray-700"}
+            flex 
+            bg-transparent 
+            text-white 
+            items-center 
+            h-[26px] 
+            sm:h-10 
+            text-xs 
+            sm:text-sm 
+            justify-center 
+            font-semibold`}
           >
             <Flag country={selected.flag} size={15} className="mr-2" />
             {selected.code}
             <svg
-              className={`w-3 h-3 ml-2 transition-transform duration-300 ${
-                open ? "" : "transform rotate-180"
-              }`}
+              className={`
+              ${open ? "" : "transform rotate-180"}
+              w-3 
+              h-3 
+              ml-2 
+              transition-transform 
+              duration-300`}
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -81,14 +94,20 @@ function Header() {
             </svg>
           </div>
           <ul
-            className={`absolute bg-[#1e232c] mt-2 overflow-y-auto w-28 sm:w-32 rounded-lg ${
-              open ? "max-h-60" : "max-h-0"
-            } `}
+            className={`
+            ${open ? "max-h-60" : "max-h-0"}
+            absolute 
+            bg-[#1e232c] 
+            mt-2 
+            overflow-y-auto 
+            w-28 
+            sm:w-32 
+            rounded-lg`}
           >
             {countries.map((item) => (
               <li
                 key={item.name}
-                className={`flex p-2 text-xs text-white sm:text-sm hover:bg-slate-100 hover:text-black`}
+                className="flex p-2 text-xs text-white sm:text-sm hover:bg-slate-100 hover:text-black"
                 onClick={() => handleSelect(item)}
               >
                 <Flag country={item.flag} size={15} className="mr-2" />

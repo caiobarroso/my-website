@@ -27,9 +27,17 @@ function Notepad() {
 
   return (
     <div
-      className={`${
-        !txtClosed ? "hidden" : "flex"
-      } flex px-6 py-4 text-LG sm:text-2xl text-white font-robotoRegular min-h-[22rem] sm:min-h-[12rem]`}
+      className={`
+      ${!txtClosed ? "hidden" : "flex"} 
+      flex 
+      px-6 
+      py-4 
+      text-lg 
+      sm:text-2xl 
+      text-white 
+      font-robotoRegular 
+      min-h-[22rem] 
+      sm:min-h-[12rem]`}
     >
       <h1 className="">{bio}</h1>
     </div>

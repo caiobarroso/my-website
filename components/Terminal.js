@@ -96,25 +96,37 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
         <div className="rounded-lg">
           <div className="bg-[#202327] flex p-1 h-10 items-center">
             <div
-              className={`${
-                !normal || !txtClosed ? "hidden" : "flex"
-              } items-center bg-[#15181E] p-1 px-3`}
+              className={`
+              ${!normal || !txtClosed ? "hidden" : "flex"} 
+              items-center 
+              bg-[#15181E] 
+              p-1 
+              px-3`}
             >
-              <div className={` flex justify-center items-center gap-4`}>
+              <div className="flex justify-center items-center gap-4">
                 <div className="flex justify-center items-center gap-1">
                   <AiFillFileText className="text-white w-4 h-4" />
                   <h1 className="text-white font-robotoBold ">myresume.txt</h1>
                 </div>
                 <AiOutlineClose
-                  className="text-white text-sm"
+                  className="text-white text-sm cursor-pointer"
                   onClick={closeTxt}
                 />
               </div>
             </div>
             <div
-              className={`${!server ? "bg-[#15181E]" : ""} ${
-                tabOneClosed || normal ? "hidden" : "flex"
-              } justify-between items-center p-1 gap-3 border-gray-400 mr-1 px-3 cursor-pointer w-34 sm:w-36`}
+              className={`
+              ${!server ? "bg-[#15181E]" : ""} 
+              ${tabOneClosed || normal ? "hidden" : "flex"} 
+              justify-between 
+              items-center 
+              p-1 gap-3 
+              border-gray-400 
+              mr-1 
+              px-3 
+              cursor-pointer 
+              w-34 
+              sm:w-36`}
               onClick={toggleServer}
             >
               <div className="flex justify-center items-center gap-2">
@@ -132,14 +144,25 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               </div>
 
               <AiOutlineClose
-                className={`${!server ? "flex" : "hidden"} text-white text-sm`}
+                className={`
+                ${!server ? "flex" : "hidden"} 
+                text-white 
+                text-sm`}
                 onClick={closeTabOne}
               />
             </div>
             <div
-              className={`${server ? "bg-[#15181E]" : ""} ${
-                tabTwoClosed || normal ? "hidden" : "flex"
-              } justify-between items-center p-1 gap-3 px-3 cursor-pointer w-34 sm:w-36`}
+              className={`
+              ${server ? "bg-[#15181E]" : ""} 
+              ${tabTwoClosed || normal ? "hidden" : "flex"} 
+              justify-between 
+              items-center 
+              p-1 
+              gap-3 
+              px-3 
+              cursor-pointer 
+              w-34 
+              sm:w-36`}
               onClick={toggleServer}
             >
               <div className="flex justify-center items-center gap-2">
@@ -157,13 +180,16 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               </div>
 
               <AiOutlineClose
-                className={`${server ? "flex" : "hidden"} text-white text-sm`}
+                className={`
+                ${server ? "flex" : "hidden"} 
+                text-white 
+                text-sm`}
                 onClick={closeTabTwo}
               />
             </div>
 
             <AiOutlineReload
-              className={`ml-auto mx-2 w-5 h-5 text-white cursor-pointer`}
+              className="ml-auto mx-2 w-5 h-5 text-white cursor-pointer"
               onClick={reload}
             />
           </div>
@@ -178,9 +204,12 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
             )}
           </div>
           <div
-            className={`${
-              server && !tabTwoClosed && !normal ? "flex-col" : "hidden"
-            } border-t-[1px] border-gray-400 bg-[#15181E] p-3`}
+            className={`
+            ${server && !tabTwoClosed && !normal ? "flex-col" : "hidden"} 
+            border-t-[1px] 
+            border-gray-400 
+            bg-[#15181E] 
+            p-3`}
           >
             <h1 className="text-[#808080] text-sm">Terminal</h1>
             <div className="flex items-center mt-2 gap-1 ">
