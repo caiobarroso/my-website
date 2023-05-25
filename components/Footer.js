@@ -46,14 +46,14 @@ function Footer() {
         </div>
         <div className="flex w-full justify-end">
           <p className="text-[8px] sm:text-xs tracking-widest">
-            DESIGNED & DEVELOPED BY:{" "}
+            Designed & Developed by:{" "}
             <a
               className="underline cursor-pointer"
               href="https://www.linkedin.com/in/caio-barroso-452aa8197/"
               target="_blank"
               rel="noreferrer"
             >
-              CBS
+              cbs
             </a>
           </p>
         </div>

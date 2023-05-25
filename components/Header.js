@@ -51,7 +51,7 @@ function Header() {
         </a>
         <a
           className="cursor-pointer"
-          href="https://github.com/caiobarroso"
+          href="https://github.com/caiobarroso/my-website"
           target="_blank"
           rel="noreferrer"
         >
