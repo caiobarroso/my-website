@@ -1,31 +1,33 @@
 import { atom } from "recoil";
 
-export const language = atom({
+const language = atom({
   key: "lang",
   default: "pt-BR",
 });
 
-export const isValid = atom({
+const isValid = atom({
   key: "valid",
   default: false,
 });
 
-export const isTwoClosed = atom({
+const isTwoClosed = atom({
   key: "tabTwo",
   default: false,
 });
 
-export const isNormal = atom({
+const isNormal = atom({
   key: "isNormal",
   default: false,
 });
 
-export const loading = atom({
+const loading = atom({
   key: "loading",
   default: false,
 });
 
-export const isTxtClosed = atom({
+const isTxtClosed = atom({
   key: "txt",
   default: true,
 });
+
+export { language, isValid, isTwoClosed, isNormal, loading, isTxtClosed };

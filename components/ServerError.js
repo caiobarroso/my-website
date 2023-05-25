@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
+import Image from "next/image";
 import { FaExclamationTriangle } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
 import { isNormal, isValid } from "@atoms";
-import Image from "next/image";
+
 
 function ServerError({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);
@@ -42,7 +43,7 @@ function ServerError({ info }) {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center  py-16 text-center font-robotoRegular">
+    <div className="flex flex-col justify-center items-center py-16 text-center font-robotoRegular">
       <Image
         src="/sadpaper.png"
         alt="..."

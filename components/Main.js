@@ -14,7 +14,6 @@ function Main() {
   const [valid, setValid] = useRecoilState(isValid);
   const [info, setInfo] = useState(data.ptBR);
   const [lang, setLang] = useRecoilState(language);
-  const [model, setModel] = useState();
 
   useEffect(() => {
     if (lang === "pt-BR") {
@@ -24,7 +23,7 @@ function Main() {
     } else {
       setInfo(data.esES);
     }
-  });
+  }, [setInfo, lang]);
 
   const { about, soft_skills, experience, education, projects, languages } =
     info;
@@ -86,11 +85,11 @@ function Main() {
             </h2>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-extrabold mt-8 mb-4 font-robotoBold">
+            <h1 className="title">
               Hard skills
             </h1>
 
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
+            <div className="section">
               <h2 className="">GraphQL, MongoDB, PostgreSQL, Firebase</h2>
 
               <h2 className="">
@@ -102,22 +101,22 @@ function Main() {
             </div>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-extrabold mt-8 mb-4 font-robotoBold">
+            <h1 className="title">
               Soft skills
             </h1>
 
-            <div className="flex flex-col lg:flex-row  gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6 lg:w-[90%]">
+            <div className="section lg:w-[90%]">
               <h2 className="">{soft_skills.sec_1}</h2>
 
               <h2 className="">{soft_skills.sec_2}</h2>
             </div>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-robotoBold mt-8 mb-4">
+            <h1 className="title">
               {experience.title}
             </h1>
 
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 text-[1rem] sm:text-lg text-[#808080] leading-6">
+            <div className="section">
               {experience.items.map((item, index) => (
                 <div key={index}>
                   <h2 className="text-[#0e76a8] font-bold">{item.title}</h2>
@@ -129,7 +128,7 @@ function Main() {
           </div>
 
           <div className="font-robotoRegular">
-            <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-robotoBold mt-8 mb-4">
+            <h1 className="title">
               {education.title}
             </h1>
 
@@ -141,7 +140,7 @@ function Main() {
             </div>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-robotoBold mt-8 mb-4">
+            <h1 className="title">
               {lang !== "en-US" ? "Idiomas" : "Languages"}
             </h1>
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-14">
@@ -162,7 +161,7 @@ function Main() {
             </div>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="text-[#DBDBDB] text-xl sm:text-2xl font-extrabold mt-8 mb-4 font-robotoBold">
+            <h1 className="title">
               {projects.title}
             </h1>
 
