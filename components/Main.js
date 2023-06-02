@@ -39,7 +39,7 @@ function Main() {
     <div className="flex flex-col">
       <Terminal info={info} />
 
-      {(valid && normal) || valid ? (
+      {valid ? (
         <div>
           <div className={`flex flex-col font-robotoRegular`}>
             <div className="flex justify-center items-center gap-4">
@@ -85,25 +85,21 @@ function Main() {
             </h2>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="title">
-              Hard skills
-            </h1>
+            <h1 className="title">Hard skills</h1>
 
             <div className="section">
               <h2 className="">GraphQL, MongoDB, PostgreSQL, Firebase</h2>
 
               <h2 className="">
                 JavaScript, CSS, HTML, React, React-native, Next.js, Node.js,
-                Tailwindcss
+                Tailwindcss, Typescript
               </h2>
 
               <h2 className="">Docker, Git</h2>
             </div>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="title">
-              Soft skills
-            </h1>
+            <h1 className="title">Soft skills</h1>
 
             <div className="section lg:w-[90%]">
               <h2 className="">{soft_skills.sec_1}</h2>
@@ -112,9 +108,7 @@ function Main() {
             </div>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="title">
-              {experience.title}
-            </h1>
+            <h1 className="title">{experience.title}</h1>
 
             <div className="section">
               {experience.items.map((item, index) => (
@@ -128,9 +122,7 @@ function Main() {
           </div>
 
           <div className="font-robotoRegular">
-            <h1 className="title">
-              {education.title}
-            </h1>
+            <h1 className="title">{education.title}</h1>
 
             <div className="text-[1rem] sm:text-lg">
               <h2 className="text-[#0e76a8] font-bold">
@@ -161,9 +153,7 @@ function Main() {
             </div>
           </div>
           <div className="font-robotoRegular">
-            <h1 className="title">
-              {projects.title}
-            </h1>
+            <h1 className="title">{projects.title}</h1>
 
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-14 text-[1rem] sm:text-lg text-[#808080] mb-6 ">
               {projects.items.map((item, idx) => (

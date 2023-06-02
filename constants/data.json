@@ -15,13 +15,14 @@
             {
                 "tab": "server",
                 "comment_one": "you need to start the server to run the application properly",
-                "comment_two": "please type in the terminal the following command and hit enter: node server.js"
+                "comment_two": "please type in the terminal the following command and hit enter: node server.js",
+                "comment_three": "DO NOT CLOSE THIS TAB WHILE SERVER IS RUNNING!"
             }
         ],
         "description": "Hello, my name is Caio Barroso, and I would like to welcome you to my website! Here you will see a little more about me.. Oh, and don't worry about not being able to fix our server, you weren't the only one. But there is always a plan B! Let me solve it for you quickly.. The application will resume in a few moments and you will be able to see the rest of the site.",
         "about": {
             "title": "About me",
-            "bio": "Hello, my name is Caio. I am passionate about programming, and my focus is on creating innovations and solving problems. I have a degree in Systems Analysis and Development. Today I work with an emphasis on web and mobile development (NodeJS, React & React-Native)."
+            "bio": "Hello, my name is Caio and I'm passionate about programming, with a focus on creating innovations and solving problems. I have an associate of Science Degree in Systems Analysis and Development and currently specialize in web and mobile development, using NodeJS, React, and React-Native. I'm always seeking challenges that allow me to expand my knowledge and enhance my skills."
         },
         "languages": [
             {
@@ -100,13 +101,14 @@
             {
                 "tab": "server",
                 "comment_one": "você precisa iniciar o servidor para executar o aplicativo corretamente",
-                "comment_two": "digite no terminal o seguinte comando e pressione enter: node server.js"
+                "comment_two": "digite no terminal o seguinte comando e pressione enter: node server.js",
+                "comment_three": "NÃO FECHE ESSA ABA ENQUANTO O SERVIDOR ESTIVER RODANDO!"
             }
         ],
         "description": "Olá, meu nome é Caio Barroso, e gostaria de te desejar boas vindas ao meu site! Aqui você verá um pouco mais sobre mim.. Ah, e não se preocupe por não ter conseguido consertar o nosso servidor, você não foi o(a) único(a). Mas sempre existe um plano B! Pode deixar que eu resolvo isso pra você rapidinho.. A aplicação será retomada em poucos instantes e você poderá ver o restante do site.",
         "about": {
             "title": "Sobre Mim",
-            "bio": "Olá, me chamo Caio. Sou apaixonado por programação, e meu foco é em criar inovações e solucionar problemas. Sou graduado em Análise e Desenvolvimento de Sistemas. Hoje atuo com ênfase em desenvolvimento web e mobile (NodeJS, React & React-Native)."
+            "bio": "Olá, meu nome é Caio e sou um entusiasta da programação com foco em criar inovações e solucionar problemas. Sou formado em Análise e Desenvolvimento de Sistemas e atuo principalmente no desenvolvimento web e mobile, utilizando NodeJS, React e React-Native. Estou sempre buscando desafios que me permitam expandir meus conhecimentos e aprimorar minhas habilidades."
         },
         "languages": [
             {
@@ -185,13 +187,14 @@
             {
                 "tab": "server",
                 "comment_one": "necesitas iniciar el servidor para ejecutar la aplicación correctamente",
-                "comment_two": "escribe en la terminal el siguiente comando y presiona enter: node server.js"
+                "comment_two": "escribe en la terminal el siguiente comando y presiona enter: node server.js",
+                "comment_three": "¡NO CIERRES ESTA PESTAÑA MIENTRAS EL SERVIDOR ESTÁ FUNCIONANDO!"
             }
         ],
         "description": "¡Hola, mi nombre es Caio Barroso y me gustaría darle la bienvenida a mi sitio web! Aquí podrás ver un poco más sobre mí.. Ah, y no te preocupes por no poder arreglar nuestro servidor, no fuiste el único. ¡Pero siempre hay un plan B! Déjame resolverlo rápidamente. La aplicación se reanudará en unos momentos y podrás ver el resto del sitio.",
         "about": {
             "title": "Sobre Mi",
-            "bio": "Hola, mi nombre es Caio. Me apasiona la programación y mi enfoque es crear innovaciones y solucionar problemas. Soy graduado en Análisis y Desarrollo de Sistemas. Actualmente me enfoco en el desarrollo web y móvil (NodeJS, React & React-Native)."
+            "bio": "Hola, mi nombre es Caio y soy un apasionado de la programación, con un enfoque en la creación de innovaciones y resolución de problemas. Tengo un Título de Asociado en Ciencias en Análisis y Desarrollo de Sistemas y actualmente me especializo en desarrollo web y móvil, utilizando NodeJS, React y React-Native. Siempre estoy buscando desafíos que me permitan ampliar mis conocimientos y mejorar mis habilidades."
         },
         "languages": [
             {

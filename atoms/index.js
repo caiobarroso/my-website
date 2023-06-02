@@ -10,11 +10,6 @@ const isValid = atom({
   default: false,
 });
 
-const isTwoClosed = atom({
-  key: "tabTwo",
-  default: false,
-});
-
 const isNormal = atom({
   key: "isNormal",
   default: false,
@@ -25,9 +20,9 @@ const loading = atom({
   default: false,
 });
 
-const isTxtClosed = atom({
-  key: "txt",
-  default: true,
+const tabSelected = atom({
+  key: "selected",
+  default: 1,
 });
 
-export { language, isValid, isTwoClosed, isNormal, loading, isTxtClosed };
+export { language, isValid, isNormal, loading, tabSelected };

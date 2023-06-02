@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaAngleDown } from "react-icons/fa";
 import { useRecoilState } from "recoil";
 import Flag from "react-flagkit";
-import { language } from "@atoms";
+import { language, isNormal, isValid, tabSelected, loading } from "@atoms";
 
 function Header() {
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useRecoilState(language);
+  const [normal, setNormal] = useRecoilState(isNormal);
+  const [valid, setValid] = useRecoilState(isValid);
+  const [selectedTab, setSelectedTab] = useRecoilState(tabSelected);
+  const [load, setLoad] = useRecoilState(loading);
 
   const countries = [
     {
@@ -37,7 +41,7 @@ function Header() {
 
   return (
     <div className="flex py-3 justify-between sticky top-0 z-50 bg-transparent font-robotoRegular bg-[#1E1E1E] mx-1 md:mx-4">
-      <div className="flex  bg-[#0e76a8] justify-center items-center font-robotoBold rounded-full px-4 h-[26px] sm:h-10">
+      <div className="flex  bg-[#0e76a8] justify-center items-center font-robotoBold rounded-full px-4 h-[26px] sm:h-10 cursor-pointer">
         <h1 className="text-[#1E1E1E] text-xl">C B S</h1>
       </div>
       <div className="flex gap-2 sm:gap-3 ">
@@ -47,7 +51,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          <FaLinkedin className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#0e76a8]" />
+          <FaLinkedin className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#0e76a8] hover:text-[#4fb9e4]" />
         </a>
         <a
           className="cursor-pointer"
@@ -55,7 +59,7 @@ function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          <FaGithub className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#0e76a8]" />
+          <FaGithub className="w-7 h-[26px] sm:w-10 sm:h-10 text-[#0e76a8] hover:text-[#4fb9e4]" />
         </a>
         <div className="font-medium cursor-pointer w-28 select-none">
           <div

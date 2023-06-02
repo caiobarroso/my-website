@@ -53,7 +53,7 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              cbs
+              CBS
             </a>
           </p>
         </div>

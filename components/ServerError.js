@@ -5,12 +5,12 @@ import { FaExclamationTriangle } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
-import { isNormal, isValid } from "@atoms";
-
+import { isNormal, isValid, tabSelected } from "@atoms";
 
 function ServerError({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
+  const [selectedTab, setSelectedTab] = useRecoilState(tabSelected);
 
   const [load, setLoad] = useState(false);
 
@@ -24,6 +24,7 @@ function ServerError({ info }) {
   const toggleNormal = () => {
     setLoad(true);
     setNormal(true);
+    setSelectedTab(3);
     setTimeout(() => {
       setValid(true);
       setLoad(false);
