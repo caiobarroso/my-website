@@ -4,18 +4,22 @@ import { FaExclamationTriangle } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
-import { isNormal, isValid } from "@atoms";
+import { isNormal, isValid, language } from "@atoms";
 import Image from "next/image";
-import Model3d from "./Model3d";
 
 function ServerError({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
+  const [lang, setLang] = useRecoilState(language);
 
   const [load, setLoad] = useState(false);
 
+  const saint = lang !== "en-US" ? "santo" : "saint";
+  const word =
+    lang === "pt-BR" ? "chame um" : lang === "en-US" ? "call a" : "llamar a un";
+
   const [callUs, c] = useTypewriter({
-    words: ["saint", "dev**"],
+    words: [saint, "dev**"],
     delaySpeed: 3000,
     loop: true,
     typeSpeed: 70,
@@ -65,7 +69,7 @@ function ServerError({ info }) {
       <h1 className="text-[#C586C0] mt-3 text-sm">
         <span>(</span>
         <span className="text-[#CE9178]">
-          "{`call a ${callUs}`}
+          "{`${word} ${callUs}`}
           <Cursor cursorColor="white" />"
         </span>
         <span>)</span>
