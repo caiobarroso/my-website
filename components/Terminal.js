@@ -126,7 +126,10 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                 className={`
                 ${selectedTab === 1 ? "flex" : "hidden"} 
                 text-white 
-                text-xs sm:text-sm`}
+                text-xs 
+                sm:text-sm 
+                hover:bg-[#272c36] 
+                rounded-sm`}
                 onClick={() => closeTab(1)}
               />
             </div>
@@ -138,6 +141,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               justify-between 
               items-center 
               p-1 
+              mr-1 
               cursor-pointer 
               w-24 
               sm:w-36`}
@@ -163,7 +167,10 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                 className={`
                 ${selectedTab === 2 ? "flex" : "hidden"} 
                 text-white 
-                text-xs sm:text-sm`}
+                text-xs 
+                sm:text-sm 
+                hover:bg-[#272c36] 
+                rounded-sm`}
                 onClick={() => closeTab(2)}
               />
             </div>
@@ -190,9 +197,12 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               </div>
 
               <AiOutlineClose
-                className={`${
-                  selectedTab === 3 ? "flex" : "hidden"
-                } text-white text-xs sm:text-sm cursor-pointer`}
+                className={`${selectedTab === 3 ? "flex" : "hidden"} text-white 
+                text-xs 
+                sm:text-sm 
+                cursor-pointer 
+                hover:bg-[#272c36] 
+                rounded-sm`}
                 onClick={() => closeTab(3)}
               />
             </div>
