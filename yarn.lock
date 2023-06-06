@@ -359,6 +359,11 @@
   dependencies:
     "@use-gesture/core" "10.2.26"
 
+"@vercel/analytics@^1.0.1":
+  "integrity" "sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow=="
+  "resolved" "https://registry.npmjs.org/@vercel/analytics/-/analytics-1.0.1.tgz"
+  "version" "1.0.1"
+
 "@webgpu/glslang@^0.0.15":
   "integrity" "sha512-niT+Prh3Aff8Uf1MVBVUsaNjFj9rJAKDXuoHIKiQbB+6IUP/3J3JIhBNyZ7lDhytvXxw6ppgnwKZdDJ08UMj4Q=="
   "resolved" "https://registry.npmjs.org/@webgpu/glslang/-/glslang-0.0.15.tgz"
