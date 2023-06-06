@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Stage, OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import Atom from "./Atom";
 
 const Model3d = () => {

@@ -1,16 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
+import Image from "next/image";
 import { FaExclamationTriangle } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
-import { isNormal, isValid, language } from "@atoms";
-import Image from "next/image";
+import { isNormal, isValid, tabSelected, language } from "@atoms";
 
 function ServerError({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
   const [lang, setLang] = useRecoilState(language);
+  const [selectedTab, setSelectedTab] = useRecoilState(tabSelected);
 
   const [load, setLoad] = useState(false);
 
@@ -28,6 +29,7 @@ function ServerError({ info }) {
   const toggleNormal = () => {
     setLoad(true);
     setNormal(true);
+    setSelectedTab(3);
     setTimeout(() => {
       setValid(true);
       setLoad(false);
@@ -47,7 +49,7 @@ function ServerError({ info }) {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center  py-16 text-center font-robotoRegular">
+    <div className="flex flex-col justify-center items-center py-16 text-center font-robotoRegular">
       <Image
         src="/sadpaper.png"
         alt="..."
