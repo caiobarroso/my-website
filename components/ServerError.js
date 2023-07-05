@@ -6,8 +6,8 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
 import { isNormal, isValid, tabSelected, language } from "@atoms";
-import { Tooltip as ReactTooltip } from "react-tooltip";
-import { isMobile } from "react-device-detect";
+// import { Tooltip as ReactTooltip } from "react-tooltip";
+// import { isMobile } from "react-device-detect";
 
 function ServerError({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);
@@ -69,7 +69,7 @@ function ServerError({ info }) {
           id="app-title"
         >
           <FaExclamationTriangle className="text-yellow-300" />
-          <p className="text-sm sm:text-xl text-red-700 font-robotoBold cursor-pointer">
+          <p className="text-sm sm:text-xl text-red-700 font-robotoBold">
             ERR_CONNECTION_REFUSED
           </p>
           <FaExclamationTriangle className="text-yellow-300" />
@@ -89,7 +89,7 @@ function ServerError({ info }) {
           {info.button}
         </button>
       </div>
-      {!isMobile && (
+      {/* {!isMobile && (
         <ReactTooltip
           anchorId="app-title"
           place="right"
@@ -97,7 +97,7 @@ function ServerError({ info }) {
           content="Você pode utilizar o editor de código acima para solucionar esse problema!"
           style={{ maxWidth: "280px" }}
         />
-      )}
+      )} */}
     </>
   );
 }

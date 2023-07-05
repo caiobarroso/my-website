@@ -202,21 +202,21 @@ function Main() {
           <div className="font-robotoRegular">
             <h1 className="title">{hobby.title}</h1>
 
-            <div className="section lg:w-[90%] mb-6">
-              <div className="flex flex-row justify-center items-center gap-3">
+            <div className="flex flex-wrap gap-6 lg:gap-16 mb-6 text-[1rem] sm:text-lg text-[#808080] leading-6">
+              <div className="flex items-center gap-3">
                 <h2 className="">{hobby.sections.one}</h2>
                 <FaChessKnight className="w-4 h-4" />
               </div>
 
-              <div className="flex flex-row justify-center items-center gap-3">
+              <div className="flex flex-row items-center gap-3">
                 <h2 className="">{hobby.sections.two}</h2>
                 <FaGamepad className="w-4 h-4" />
               </div>
-              <div className="flex flex-row justify-center items-center gap-3">
+              <div className="flex flex-row items-center gap-3">
                 <h2 className="">{hobby.sections.three}</h2>
                 <FaVolleyballBall className="w-4 h-4" />
               </div>
-              <div className="flex flex-row justify-center items-center gap-3">
+              <div className="flex flex-row items-center gap-3">
                 <h2 className="">Podcasts</h2>
                 <FaPodcast className="w-4 h-4" />
               </div>
