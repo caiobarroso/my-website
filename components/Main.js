@@ -1,7 +1,14 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from "react";
-import { FaDownload, FaLink } from "react-icons/fa";
+import {
+  FaDownload,
+  FaLink,
+  FaChessKnight,
+  FaGamepad,
+  FaVolleyballBall,
+  FaPodcast,
+} from "react-icons/fa";
 import { useRecoilState } from "recoil";
 import { isValid, isNormal, language } from "@atoms";
 import Terminal from "@components/Terminal";
@@ -25,8 +32,15 @@ function Main() {
     }
   }, [setInfo, lang]);
 
-  const { about, soft_skills, experience, education, projects, languages } =
-    info;
+  const {
+    about,
+    soft_skills,
+    experience,
+    education,
+    projects,
+    languages,
+    hobby,
+  } = info;
 
   const download =
     lang === "pt-BR"
@@ -105,6 +119,7 @@ function Main() {
               <h2 className="">{soft_skills.sec_1}</h2>
 
               <h2 className="">{soft_skills.sec_2}</h2>
+              <h2 className="">{soft_skills.sec_3}</h2>
             </div>
           </div>
           <div className="font-robotoRegular">
@@ -182,6 +197,29 @@ function Main() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+          <div className="font-robotoRegular">
+            <h1 className="title">{hobby.title}</h1>
+
+            <div className="section lg:w-[90%] mb-6">
+              <div className="flex flex-row justify-center items-center gap-3">
+                <h2 className="">{hobby.sections.one}</h2>
+                <FaChessKnight className="w-4 h-4" />
+              </div>
+
+              <div className="flex flex-row justify-center items-center gap-3">
+                <h2 className="">{hobby.sections.two}</h2>
+                <FaGamepad className="w-4 h-4" />
+              </div>
+              <div className="flex flex-row justify-center items-center gap-3">
+                <h2 className="">{hobby.sections.three}</h2>
+                <FaVolleyballBall className="w-4 h-4" />
+              </div>
+              <div className="flex flex-row justify-center items-center gap-3">
+                <h2 className="">Podcasts</h2>
+                <FaPodcast className="w-4 h-4" />
+              </div>
             </div>
           </div>
         </div>

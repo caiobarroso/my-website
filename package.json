@@ -9,18 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.13",
     "@react-three/drei": "^9.65.4",
     "@react-three/fiber": "^8.12.2",
     "@react-three/postprocessing": "^2.7.1",
     "@vercel/analytics": "^1.0.1",
     "next": "13.1.6",
     "react": "18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
     "react-flagkit": "^2.0.4",
     "react-icons": "^4.7.1",
     "react-loading": "^2.0.3",
     "react-simple-typewriter": "^5.0.1",
     "react-syntax-highlighter": "^15.5.0",
+    "react-tooltip": "^5.18.0",
     "recoil": "^0.7.6",
     "three": "^0.151.3"
   },

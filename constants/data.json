@@ -36,7 +36,8 @@
         ],
         "soft_skills": {
             "sec_1": "Effective Communication, Teamwork, Adaptability, Creativity",
-            "sec_2": "Troubleshooting, Quick Learning, Organization"
+            "sec_2": "Troubleshooting, Quick Learning, Organization",
+            "sec_3": "Agile methods (Scrum)"
         },
         "experience": {
             "title": "Work Experience",
@@ -83,6 +84,14 @@
                     ]
                 }
             ]
+        },
+        "hobby": {
+            "title": "Hobbies",
+            "sections": {
+                "one": "Chess",
+                "two": "FPS Games",
+                "three": "Sports"
+            }
         }
     },
     "ptBR": {
@@ -122,7 +131,8 @@
         ],
         "soft_skills": {
             "sec_1": "Comunicação eficaz, Trabalho em equipe, Adaptabilidade, Criatividade",
-            "sec_2": "Solução de problemas, Aprendizado rápido, Organização"
+            "sec_2": "Solução de problemas, Aprendizado rápido, Organização",
+            "sec_3": "Métodos ágeis (Scrum)"
         },
         "experience": {
             "title": "Experiência Profissional",
@@ -169,6 +179,14 @@
                     ]
                 }
             ]
+        },
+        "hobby": {
+            "title": "Hobbies",
+            "sections": {
+                "one": "Xadrez",
+                "two": "Jogos de FPS",
+                "three": "Esportes"
+            }
         }
     },
     "esES": {
@@ -208,7 +226,8 @@
         ],
         "soft_skills": {
             "sec_1": "Comunicación efectiva, Trabajo en equipo, Adaptabilidad, Creatividad",
-            "sec_2": "Solución de problemas, Aprendizaje rápido, Organización"
+            "sec_2": "Solución de problemas, Aprendizaje rápido, Organización",
+            "sec_3": "Métodos ágiles (Scrum)"
         },
         "experience": {
             "title": "Experiencia Profesional",
@@ -255,6 +274,14 @@
                     ]
                 }
             ]
+        },
+        "hobby": {
+            "title": "Pasatiempo",
+            "sections": {
+                "one": "Ajedrez",
+                "two": "Juegos de fps",
+                "three": "Deportes"
+            }
         }
     }
 }
