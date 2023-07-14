@@ -106,7 +106,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               sm:w-36`}
             >
               <div
-                className="flex items-center gap-1 sm:gap-2 px-1 sm:px-2 flex-1"
+                className="flex items-center gap-1 sm:gap-2 px-1 sm:px-2 flex-1 select-none"
                 onClick={() => setSelectedTab(1)}
               >
                 <Image
@@ -147,7 +147,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               sm:w-36`}
             >
               <div
-                className="flex items-center gap-1 sm:gap-2 px-1 sm:px-2 flex-1"
+                className="flex items-center gap-1 sm:gap-2 px-1 sm:px-2 flex-1 select-none"
                 onClick={() => setSelectedTab(2)}
               >
                 <Image
@@ -187,7 +187,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               sm:w-28`}
             >
               <div
-                className="flex items-center gap-1 sm:gap-2 px-1 sm:px-2 flex-1"
+                className="flex items-center gap-1 sm:gap-2 px-1 sm:px-2 flex-1 select-none"
                 onClick={() => setSelectedTab(3)}
               >
                 <AiFillFileText className="text-white w-3 h-3 sm:w-4 sm:h-4" />
