@@ -110,6 +110,7 @@ function Main() {
               </h2>
 
               <h2 className="">Docker, Git</h2>
+              <h2 className="">Jest, Cypress</h2>
             </div>
           </div>
           <div className="font-robotoRegular">
