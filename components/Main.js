@@ -92,7 +92,7 @@ function Main() {
             </div>
 
             <h2 className="text-base text-[1rem] sm:text-lg text-[#808080] mt-4">
-              // Javascript Fullstack Developer @ Bean Softwares
+              // Fullstack Software Developer @ Bean Softwares
             </h2>
             <h2 className="text-base text-[1rem] sm:text-lg text-[#808080]">
               // JS &gt;&gt;&gt;&gt;
