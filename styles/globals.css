@@ -20,10 +20,10 @@
 
 @font-face {
   font-family: "Roboto-bold";
-  src: url("../public/RobotoMono-Bold.ttf");
+  src: url("../public/fonts/RobotoMono-Bold.ttf");
 }
 
 @font-face {
   font-family: "Roboto-normal";
-  src: url("../public/RobotoMono-Regular.ttf");
+  src: url("../public/fonts/RobotoMono-Regular.ttf");
 }

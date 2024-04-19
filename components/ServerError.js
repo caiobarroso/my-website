@@ -6,8 +6,6 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReactLoading from "react-loading";
 import { useRecoilState } from "recoil";
 import { isNormal, isValid, tabSelected, language } from "@atoms";
-// import { Tooltip as ReactTooltip } from "react-tooltip";
-// import { isMobile } from "react-device-detect";
 
 function ServerError({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);
@@ -89,15 +87,6 @@ function ServerError({ info }) {
           {info.button}
         </button>
       </div>
-      {/* {!isMobile && (
-        <ReactTooltip
-          anchorId="app-title"
-          place="right"
-          effect="solid"
-          content="Você pode utilizar o editor de código acima para solucionar esse problema!"
-          style={{ maxWidth: "280px" }}
-        />
-      )} */}
     </>
   );
 }

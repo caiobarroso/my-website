@@ -10,15 +10,39 @@ import {
   FaPodcast,
 } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { isValid, isNormal, language } from "@atoms";
+import { isValid, language } from "@atoms";
 import Terminal from "@components/Terminal";
 import ServerError from "@components/ServerError";
 import data from "../constants/data.json";
 import Model3d from "./Model3d";
+import Image from "next/image";
+
+const certificados = ["/udemy.png", "/certificado.png"];
+
+function Modal({ isOpen, close, children }) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+      <div className="flex flex-col bg-[#1E1E1E] shadow-lg relative max-w-3xl w-full mx-auto overflow-auto rounded-lg">
+        <span
+          className="absolute top-0 right-0 mt-4 mr-4 cursor-pointer text-white bg-[#1E1E1E] rounded-full w-10 h-10 flex items-center justify-center leading-none z-50 text-center"
+          onClick={close}
+          aria-label="Close modal"
+        >
+          ✕
+        </span>
+
+        {children}
+      </div>
+    </div>
+  );
+}
 
 function Main() {
-  const [normal, setNormal] = useRecoilState(isNormal);
   const [valid, setValid] = useRecoilState(isValid);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedCertificate, setSelectedCertificate] = useState("");
   const [info, setInfo] = useState(data.ptBR);
   const [lang, setLang] = useRecoilState(language);
 
@@ -40,7 +64,13 @@ function Main() {
     projects,
     languages,
     hobby,
+    certificates,
   } = info;
+
+  const openModal = (certificate) => {
+    setSelectedCertificate(certificate);
+    setIsOpen(true);
+  };
 
   const download =
     lang === "pt-BR"
@@ -54,8 +84,8 @@ function Main() {
       <Terminal info={info} />
 
       {valid ? (
-        <div>
-          <div className={`flex flex-col font-robotoRegular`}>
+        <div className="font-robotoRegular">
+          <div className={`flex flex-col`}>
             <div className="flex justify-center items-center gap-4">
               <div className="flex">
                 <div>
@@ -98,7 +128,7 @@ function Main() {
               // JS &gt;&gt;&gt;&gt;
             </h2>
           </div>
-          <div className="font-robotoRegular">
+          <div className="">
             <h1 className="title">Hard skills</h1>
 
             <div className="section">
@@ -113,7 +143,7 @@ function Main() {
               <h2 className="">Jest, Cypress</h2>
             </div>
           </div>
-          <div className="font-robotoRegular">
+          <div className="">
             <h1 className="title">Soft skills</h1>
 
             <div className="section lg:w-[90%]">
@@ -123,7 +153,7 @@ function Main() {
               <h2 className="">{soft_skills.sec_3}</h2>
             </div>
           </div>
-          <div className="font-robotoRegular">
+          <div className="">
             <h1 className="title">{experience.title}</h1>
 
             <div className="section">
@@ -137,7 +167,7 @@ function Main() {
             </div>
           </div>
 
-          <div className="font-robotoRegular">
+          <div className="">
             <h1 className="title">{education.title}</h1>
 
             <div className="text-[1rem] sm:text-lg">
@@ -147,7 +177,7 @@ function Main() {
               <h2 className="text-[#808080]">{education.description}</h2>
             </div>
           </div>
-          <div className="font-robotoRegular">
+          <div className="">
             <h1 className="title">
               {lang !== "en-US" ? "Idiomas" : "Languages"}
             </h1>
@@ -168,7 +198,7 @@ function Main() {
               </div>
             </div>
           </div>
-          <div className="font-robotoRegular">
+          <div className="">
             <h1 className="title">{projects.title}</h1>
 
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-14 text-[1rem] sm:text-lg text-[#808080] mb-6 ">
@@ -200,7 +230,29 @@ function Main() {
               ))}
             </div>
           </div>
-          <div className="font-robotoRegular">
+          <div className="">
+            <h1 className="title">{certificates.title}</h1>
+
+            <div className="flex flex-wrap gap-2 lg:gap-12 mb-6 text-[1rem] sm:text-lg text-[#808080] leading-6">
+              {certificados.map((item, i) => (
+                <div
+                  className="flex flex-col items-center cursor-pointer"
+                  key={i}
+                  onClick={() => openModal(item)}
+                >
+                  <Image
+                    src={item}
+                    alt="..."
+                    width={160}
+                    height={260}
+                    priority={true}
+                    className="rounded-md border-4 border-[#808080] w-48 h-32"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="">
             <h1 className="title">{hobby.title}</h1>
 
             <div className="flex flex-wrap gap-6 lg:gap-16 mb-6 text-[1rem] sm:text-lg text-[#808080] leading-6">
@@ -223,6 +275,18 @@ function Main() {
               </div>
             </div>
           </div>
+
+          <Modal isOpen={isOpen} close={() => setIsOpen(false)}>
+            <div className="relative min-h-[265px] lg:h-[530px]">
+              <Image
+                src={selectedCertificate}
+                alt="Imagem ampliada"
+                fill
+                className="object-contain lg:object-cover"
+                priority={true}
+              />
+            </div>
+          </Modal>
         </div>
       ) : (
         <ServerError info={info} />

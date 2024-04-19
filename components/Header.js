@@ -4,31 +4,27 @@ import { useRecoilState } from "recoil";
 import Flag from "react-flagkit";
 import { language, isNormal, isValid, tabSelected, loading } from "@atoms";
 
+const countries = [
+  {
+    name: "Portuguese",
+    flag: "BR",
+    code: "pt-BR",
+  },
+  {
+    name: "English",
+    flag: "US",
+    code: "en-US",
+  },
+  {
+    name: "Spanish",
+    flag: "ES",
+    code: "es-ES",
+  },
+];
+
 function Header() {
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useRecoilState(language);
-  const [normal, setNormal] = useRecoilState(isNormal);
-  const [valid, setValid] = useRecoilState(isValid);
-  const [selectedTab, setSelectedTab] = useRecoilState(tabSelected);
-  const [load, setLoad] = useRecoilState(loading);
-
-  const countries = [
-    {
-      name: "Portuguese",
-      flag: "BR",
-      code: "pt-BR",
-    },
-    {
-      name: "English",
-      flag: "US",
-      code: "en-US",
-    },
-    {
-      name: "Spanish",
-      flag: "ES",
-      code: "es-ES",
-    },
-  ];
   const [selected, setSelected] = useState(countries[0]);
 
   const handleSelect = (country) => {
