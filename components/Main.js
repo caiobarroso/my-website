@@ -17,7 +17,7 @@ import data from "../constants/data.json";
 import Model3d from "./Model3d";
 import Image from "next/image";
 
-const certificados = ["/udemy.png", "/certificado.png"];
+const certificados = ["/udemy.webp", "/certificado.webp"];
 
 function Modal({ isOpen, close, children }) {
   if (!isOpen) return null;
@@ -245,7 +245,8 @@ function Main() {
                     alt="..."
                     width={160}
                     height={260}
-                    priority={true}
+                    priority
+                    placeholder="blur"
                     className="rounded-md border-4 border-[#808080] w-48 h-32"
                   />
                 </div>
@@ -283,7 +284,7 @@ function Main() {
                 alt="Imagem ampliada"
                 fill
                 className="object-contain lg:object-cover"
-                priority={true}
+                priority
               />
             </div>
           </Modal>
