@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { useRecoilState } from "recoil";
 import { isValid, isNormal, loading, tabSelected } from "@atoms";
-import Notepad from "@components/Notepad";
-import Codeblock from "@components/Codeblock";
+import { Notepad, Codeblock } from "components";
+import Image from "next/image";
 import {
   AiOutlineReload,
   AiFillFileText,

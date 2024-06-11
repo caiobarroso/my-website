@@ -1,5 +1,5 @@
-import Footer from "@components/Footer";
-import Header from "@components/Header";
+import Footer from "@components/commom/Footer";
+import Header from "@components/commom/Header";
 import { Analytics } from "@vercel/analytics/react";
 import { RecoilRoot } from "recoil";
 import "../styles/globals.css";
