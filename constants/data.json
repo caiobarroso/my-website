@@ -73,12 +73,18 @@
       "title": "Projects",
       "items": [
         {
-          "img": "/Frame22.png",
           "link": "https://poco-da-draga.vercel.app/",
           "title": "Poço da Draga",
           "description": "Application created to disseminate stories of residents of a poor community",
           "tecnologies": ["Next.js", "Tailwind.css", "Sanity.io"]
+        },
+        {
+          "link": "https://abestfy.com/",
+          "title": "Abestfy",
+          "description": "Landing page created for a Brazilian fintech",
+          "tecnologies": ["Next.js", "Tailwind.css", "Framer-motion"]
         }
+
       ]
     },
     "hobby": {
@@ -169,6 +175,12 @@
           "title": "Poço da Draga",
           "description": "Aplicação criada para divulgar histórias dos residentes de uma comunidade carente",
           "tecnologies": ["Next.js", "Tailwind.css", "Sanity.io"]
+        },
+        {
+          "link": "https://abestfy.com/",
+          "title": "Abestfy",
+          "description": "Landing page criada para uma fintech brasileira",
+          "tecnologies": ["Next.js", "Tailwind.css", "Framer-motion"]
         }
       ]
     },
@@ -255,11 +267,16 @@
       "title": "Proyectos",
       "items": [
         {
-          "img": "/Frame22.png",
           "link": "https://poco-da-draga.vercel.app/",
           "title": "Poço da Draga",
           "description": "Aplicación creada para divulgar historias de los residentes de una comunidad necesitada",
           "tecnologies": ["Next.js", "Tailwind.css", "Sanity.io"]
+        },
+        {
+          "link": "https://abestfy.com/",
+          "title": "Abestfy",
+          "description": "Landing page creada para una fintech brasileña",
+          "tecnologies": ["Next.js", "Tailwind.css", "Framer-motion"]
         }
       ]
     },

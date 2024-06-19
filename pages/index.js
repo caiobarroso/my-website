@@ -207,12 +207,9 @@ export default function Home() {
             <div className="">
               <h1 className="title">{projects.title}</h1>
 
-              <div className="flex flex-col sm:flex-row gap-6 sm:gap-14 text-[1rem] sm:text-lg text-[#808080] mb-6 ">
+              <div className="flex flex-col gap-6  text-[1rem] sm:text-lg text-[#808080] mb-6 ">
                 {projects.items.map((item, idx) => (
-                  <div
-                    className="flex gap-3 justify-center items-center"
-                    key={idx}
-                  >
+                  <div className="flex gap-3 items-center" key={idx}>
                     <div className="flex flex-col">
                       <a
                         className="flex hover:underline font-robotoBold text-[#0e76a8]"
