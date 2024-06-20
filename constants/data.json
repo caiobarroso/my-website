@@ -40,7 +40,7 @@
       "title": "Work Experience",
       "items": [
         {
-          "title": "Software Developer",
+          "title": "Mid Level Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - may/2024"
         },
@@ -94,7 +94,8 @@
         "two": "FPS Games",
         "three": "Sports"
       }
-    }
+    },
+    "dark_mode": ["Dark Mode", "Night Mode", "No Light Mode", "Who uses light mode?" ,"Give Up!"]
   },
   "ptBR": {
     "error": "Ooops.. Infelizmente não conseguimos estabelecer uma conexão com o servidor.",
@@ -137,7 +138,7 @@
       "title": "Experiência Profissional",
       "items": [
         {
-          "title": "Software Developer",
+          "title": "Mid Level Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - maio/2024"
         },
@@ -191,7 +192,8 @@
         "two": "Jogos de FPS",
         "three": "Esportes"
       }
-    }
+    },
+    "dark_mode": ["Modo Escuro", "Dark Mode", "Não tem modo claro", "Quem usa modo claro?", "Desista!"]
   },
   "esES": {
     "error": "Ooops... Desafortunadamente, no pudimos establecer una conexión con el servidor.",
@@ -234,7 +236,7 @@
       "title": "Experiencia Profesional",
       "items": [
         {
-          "title": "Software Developer",
+          "title": "Mid Level Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - mayo"
         },
@@ -287,6 +289,7 @@
         "two": "Juegos de fps",
         "three": "Deportes"
       }
-    }
+    },
+    "dark_mode": ["Modo Oscuro", "Modo Nocturno", "Sin Modo Claro", "¿Quién usa el modo claro?", "Rendirse!"]
   }
 }
