@@ -40,7 +40,7 @@
       "title": "Work Experience",
       "items": [
         {
-          "title": "Software Developer",
+          "title": "Mid Level Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - may/2024"
         },
@@ -73,12 +73,18 @@
       "title": "Projects",
       "items": [
         {
-          "img": "/Frame22.png",
           "link": "https://poco-da-draga.vercel.app/",
           "title": "Poço da Draga",
           "description": "Application created to disseminate stories of residents of a poor community",
           "tecnologies": ["Next.js", "Tailwind.css", "Sanity.io"]
+        },
+        {
+          "link": "https://abestfy.com/",
+          "title": "Abestfy",
+          "description": "Landing page created for a Brazilian fintech",
+          "tecnologies": ["Next.js", "Tailwind.css", "Framer-motion"]
         }
+
       ]
     },
     "hobby": {
@@ -88,7 +94,8 @@
         "two": "FPS Games",
         "three": "Sports"
       }
-    }
+    },
+    "dark_mode": ["Dark Mode", "Night Mode", "No Light Mode", "Who uses light mode?" ,"Give Up!"]
   },
   "ptBR": {
     "error": "Ooops.. Infelizmente não conseguimos estabelecer uma conexão com o servidor.",
@@ -131,7 +138,7 @@
       "title": "Experiência Profissional",
       "items": [
         {
-          "title": "Software Developer",
+          "title": "Mid Level Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - maio/2024"
         },
@@ -169,6 +176,12 @@
           "title": "Poço da Draga",
           "description": "Aplicação criada para divulgar histórias dos residentes de uma comunidade carente",
           "tecnologies": ["Next.js", "Tailwind.css", "Sanity.io"]
+        },
+        {
+          "link": "https://abestfy.com/",
+          "title": "Abestfy",
+          "description": "Landing page criada para uma fintech brasileira",
+          "tecnologies": ["Next.js", "Tailwind.css", "Framer-motion"]
         }
       ]
     },
@@ -179,7 +192,8 @@
         "two": "Jogos de FPS",
         "three": "Esportes"
       }
-    }
+    },
+    "dark_mode": ["Modo Escuro", "Dark Mode", "Não tem modo claro", "Quem usa modo claro?", "Desista!"]
   },
   "esES": {
     "error": "Ooops... Desafortunadamente, no pudimos establecer una conexión con el servidor.",
@@ -222,7 +236,7 @@
       "title": "Experiencia Profesional",
       "items": [
         {
-          "title": "Software Developer",
+          "title": "Mid Level Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - mayo"
         },
@@ -255,11 +269,16 @@
       "title": "Proyectos",
       "items": [
         {
-          "img": "/Frame22.png",
           "link": "https://poco-da-draga.vercel.app/",
           "title": "Poço da Draga",
           "description": "Aplicación creada para divulgar historias de los residentes de una comunidad necesitada",
           "tecnologies": ["Next.js", "Tailwind.css", "Sanity.io"]
+        },
+        {
+          "link": "https://abestfy.com/",
+          "title": "Abestfy",
+          "description": "Landing page creada para una fintech brasileña",
+          "tecnologies": ["Next.js", "Tailwind.css", "Framer-motion"]
         }
       ]
     },
@@ -270,6 +289,7 @@
         "two": "Juegos de fps",
         "three": "Deportes"
       }
-    }
+    },
+    "dark_mode": ["Modo Oscuro", "Modo Nocturno", "Sin Modo Claro", "¿Quién usa el modo claro?", "Rendirse!"]
   }
 }

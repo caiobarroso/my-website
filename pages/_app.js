@@ -8,10 +8,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <RecoilRoot>
       <div className="min-h-screen flex flex-col mx-1 2xl:mx-auto max-w-[1440px]">
-        <Header />
         <Component {...pageProps} />
         <Analytics />
-        <Footer />
       </div>
     </RecoilRoot>
   );

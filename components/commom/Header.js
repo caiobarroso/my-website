@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaAngleDown } from "react-icons/fa";
 import { useRecoilState } from "recoil";
 import Flag from "react-flagkit";
-import { language, isNormal, isValid, tabSelected, loading } from "@atoms";
+import { language } from "@atoms";
 
 const countries = [
   {
@@ -36,8 +36,8 @@ function Header() {
   };
 
   return (
-    <div className="flex py-3 justify-between sticky top-0 z-50 bg-transparent font-robotoRegular bg-[#1E1E1E] mx-1 md:mx-4">
-      <div className="flex  bg-[#0e76a8] justify-center items-center font-robotoBold rounded-full px-4 h-[26px] sm:h-10">
+    <div className="flex py-3 justify-between sticky top-0 z-50  font-robotoRegular bg-transparent">
+      <div className="flex bg-[#0e76a8] justify-center items-center font-robotoBold rounded-full px-4 h-[26px] sm:h-10">
         <h1 className="text-[#1E1E1E] text-xl">C B S</h1>
       </div>
       <div className="flex gap-2 sm:gap-3 ">

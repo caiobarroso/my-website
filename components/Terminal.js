@@ -1,15 +1,15 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState, useEffect } from "react";
-import { useRecoilState } from "recoil";
-import { isValid, isNormal, loading, tabSelected } from "@atoms";
-import { Notepad, Codeblock } from "components";
+import { isNormal, isValid, loading, tabSelected } from "@atoms";
+import { Codeblock, Notepad } from "components";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import {
-  AiOutlineReload,
   AiFillFileText,
   AiOutlineClose,
+  AiOutlineReload,
 } from "react-icons/ai";
+import { useRecoilState } from "recoil";
 
 function Terminal({ info }) {
   const [normal, setNormal] = useRecoilState(isNormal);
@@ -68,7 +68,7 @@ function Terminal({ info }) {
   const aboutTab = `const resume = require("resume");
 
 const name = "Caio Barroso 👋";
-const job = "Software Developer";
+const job = "Mid-Level Software Developer";
 const focusedOn = ["${tabs[0].focusedOn[0]}","${tabs[0].focusedOn[1]}"];
 `;
 

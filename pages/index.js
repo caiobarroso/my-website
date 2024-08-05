@@ -3,7 +3,7 @@ import { isValid, language } from "@atoms";
 import { Model3d, ServerError, Terminal } from "components";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   FaChessKnight,
   FaDownload,
@@ -14,6 +14,8 @@ import {
 } from "react-icons/fa";
 import data from "../constants/data.json";
 
+import Footer from "@components/commom/Footer";
+import Header from "@components/commom/Header";
 import { useRecoilState } from "recoil";
 
 const certificados = ["/udemy.webp", "/certificado.webp"];
@@ -45,15 +47,18 @@ export default function Home() {
   const [info, setInfo] = useState(data.ptBR);
   const [lang, setLang] = useRecoilState(language);
 
+  const translations = useMemo(
+    () => ({
+      "pt-BR": data.ptBR,
+      "en-US": data.enUS,
+      "es-ES": data.esES,
+    }),
+    []
+  );
+
   useEffect(() => {
-    if (lang === "pt-BR") {
-      setInfo(data.ptBR);
-    } else if (lang === "en-US") {
-      setInfo(data.enUS);
-    } else {
-      setInfo(data.esES);
-    }
-  }, [setInfo, lang]);
+    setInfo(translations[lang] || data.ptBR);
+  }, [lang, translations]);
 
   const {
     about,
@@ -64,6 +69,7 @@ export default function Home() {
     languages,
     hobby,
     certificates,
+    dark_mode,
   } = info;
 
   const openModal = (certificate) => {
@@ -87,6 +93,7 @@ export default function Home() {
       </Head>
 
       <div className="flex flex-col mx-4">
+        <Header />
         <Terminal info={info} />
 
         {valid ? (
@@ -138,7 +145,7 @@ export default function Home() {
 
                 <h2 className="">
                   JavaScript, CSS, HTML, React, React-native, Next.js, Node.js,
-                  Tailwindcss, Typescript
+                  Tailwindcss, Typescript, SOLID
                 </h2>
 
                 <h2 className="">Docker, Git</h2>
@@ -203,12 +210,9 @@ export default function Home() {
             <div className="">
               <h1 className="title">{projects.title}</h1>
 
-              <div className="flex flex-col sm:flex-row gap-6 sm:gap-14 text-[1rem] sm:text-lg text-[#808080] mb-6 ">
+              <div className="flex flex-col gap-6  text-[1rem] sm:text-lg text-[#808080] mb-6 ">
                 {projects.items.map((item, idx) => (
-                  <div
-                    className="flex gap-3 justify-center items-center"
-                    key={idx}
-                  >
+                  <div className="flex gap-3 items-center" key={idx}>
                     <div className="flex flex-col">
                       <a
                         className="flex hover:underline font-robotoBold text-[#0e76a8]"
@@ -294,6 +298,7 @@ export default function Home() {
           <ServerError info={info} />
         )}
       </div>
+      <Footer texts={dark_mode} />
     </div>
   );
 }
