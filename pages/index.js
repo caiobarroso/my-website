@@ -1,10 +1,9 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import { useEffect, useState } from "react";
+import { isValid, language } from "@atoms";
+import { Model3d, ServerError, Terminal } from "components";
 import Head from "next/head";
 import Image from "next/image";
-import { isValid, language } from "@atoms";
-import data from "../constants/data.json";
-import { Model3d, ServerError, Terminal } from "components";
+import { useEffect, useState } from "react";
 import {
   FaChessKnight,
   FaDownload,
@@ -13,6 +12,7 @@ import {
   FaPodcast,
   FaVolleyballBall,
 } from "react-icons/fa";
+import data from "../constants/data.json";
 
 import { useRecoilState } from "recoil";
 
@@ -104,11 +104,7 @@ export default function Home() {
                       </p>
                       <a
                         className="flex text-center bg-[#0e76a8] px-4 rounded-full text-white justify-center items-center gap-2 text-sm"
-                        href={
-                          lang === "pt-BR"
-                            ? "https://drive.google.com/file/d/1mXcYBNCXnx4VAXCcYMU_JcqzFShXptAl/view?usp=sharing"
-                            : "https://drive.google.com/file/d/1Xm0kQFAOBxZAmql5U1HPC3TMQy0XSTrT/view?usp=sharing"
-                        }
+                        href="https://drive.google.com/file/d/16P_QiOU8jRve8gahktCNdryApjANsEt6/view?usp=drive_link"
                         target="_blank"
                         rel="noreferrer"
                       >
