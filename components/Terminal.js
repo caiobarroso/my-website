@@ -49,7 +49,7 @@ function Terminal({ info }) {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (input.toLocaleLowerCase() === "node server.js") {
+    if (input.toLocaleLowerCase() === "node server.ts") {
       setTimeout(() => {
         setValid(true);
         setText("Listening Server, on PORT: 4000");
@@ -68,7 +68,7 @@ function Terminal({ info }) {
   const aboutTab = `const resume = require("resume");
 
 const name = "Caio Barroso 👋";
-const job = "Mid-Level Software Developer";
+const job = "Software Developer";
 const focusedOn = ["${tabs[0].focusedOn[0]}","${tabs[0].focusedOn[1]}"];
 `;
 
@@ -109,7 +109,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                 onClick={() => setSelectedTab(1)}
               >
                 <Image
-                  src="/logo.svg"
+                  src="/typescript.svg"
                   alt="..."
                   width={3}
                   height={3}
@@ -117,7 +117,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                   className="w-2 h-2 sm:w-3 sm:h-3"
                 />
                 <h2 className="text-white text-xs sm:text-sm italic font-semibold">
-                  {info.tabs[0].tab}.js
+                  {info.tabs[0].tab}.ts
                 </h2>
               </div>
 
@@ -150,7 +150,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                 onClick={() => setSelectedTab(2)}
               >
                 <Image
-                  src="/logo.svg"
+                  src="/typescript.svg"
                   alt="..."
                   width={3}
                   height={3}
@@ -158,7 +158,7 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
                   className="w-2 h-2 sm:w-3 sm:h-3"
                 />
                 <h2 className="text-white text-xs sm:text-sm italic font-semibold">
-                  {info.tabs[1].tab}.js
+                  {info.tabs[1].tab}.ts
                 </h2>
               </div>
 
@@ -243,8 +243,8 @@ app.listen( PORT , () => { console.log("Listening Server, on PORT: " + PORT )});
               <form onSubmit={onSubmit}>
                 <input
                   type="text"
-                  placeholder="node server.js"
-                  value={normal && valid ? "node server.js" : input}
+                  placeholder="node server.ts"
+                  value={normal && valid ? "node server.ts" : input}
                   onChange={(ev) => setInput(ev.target.value)}
                   className="blinki bg-transparent text-xs sm:text-sm outline-none text-yellow-300 w-full lowercase font-robotoRegular"
                 />

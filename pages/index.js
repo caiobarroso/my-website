@@ -18,7 +18,11 @@ import Footer from "@components/commom/Footer";
 import Header from "@components/commom/Header";
 import { useRecoilState } from "recoil";
 
-const certificados = ["/udemy.webp", "/certificado.webp"];
+const certificados = [
+  "/udemy.webp",
+  "/certificado-tdd.webp",
+  "/certificado.webp",
+];
 
 function Modal({ isOpen, close, children }) {
   if (!isOpen) return null;
@@ -131,7 +135,7 @@ export default function Home() {
               </div>
 
               <h2 className="text-base text-[1rem] sm:text-lg text-[#808080] mt-4">
-                // Mid-Level Software Developer
+                // Software Developer
               </h2>
               <h2 className="text-base text-[1rem] sm:text-lg text-[#808080]">
                 // TS &gt;&gt;&gt;&gt;
@@ -184,6 +188,15 @@ export default function Home() {
                   2019-2023 • {education.university}
                 </h2>
                 <h2 className="text-[#808080]">{education.description}</h2>
+              </div>
+
+              <div className="text-[1rem] sm:text-lg mt-4">
+                <h2 className="text-[#0e76a8] font-bold">
+                  08/2024-11/2024 • {education.englishSchool}
+                </h2>
+                <h2 className="text-[#808080]">
+                  {education.englishDescription}
+                </h2>
               </div>
             </div>
             <div className="">

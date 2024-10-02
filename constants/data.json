@@ -12,7 +12,7 @@
       {
         "tab": "server",
         "comment_one": "you need to start the server to run the application properly",
-        "comment_two": "please type in the terminal the following command and hit enter: node server.js",
+        "comment_two": "please type in the terminal the following command and hit enter: node server.ts",
         "comment_three": "DO NOT CLOSE THIS TAB WHILE SERVER IS RUNNING!"
       }
     ],
@@ -40,7 +40,7 @@
       "title": "Work Experience",
       "items": [
         {
-          "title": "Mid Level Software Developer",
+          "title": "Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - may/2024"
         },
@@ -64,8 +64,11 @@
     "education": {
       "title": "Education",
       "university": "University of Fortaleza (UNIFOR)",
-      "description": "Associate of Science Degree in Systems Analysis and Development"
+      "description": "Associate of Science Degree in Systems Analysis and Development",
+      "englishSchool": "ILSC Toronto",
+      "englishDescription": "English Immersion Program during a 3-month exchange in Toronto."
     },
+
     "certificates": {
       "title": "Certificates"
     },
@@ -84,7 +87,6 @@
           "description": "Landing page created for a Brazilian fintech",
           "tecnologies": ["Next.js", "Tailwind.css", "Framer-motion"]
         }
-
       ]
     },
     "hobby": {
@@ -95,7 +97,13 @@
         "three": "Sports"
       }
     },
-    "dark_mode": ["Dark Mode", "Night Mode", "No Light Mode", "Who uses light mode?" ,"Give Up!"]
+    "dark_mode": [
+      "Dark Mode",
+      "Night Mode",
+      "No Light Mode",
+      "Who uses light mode?",
+      "Give Up!"
+    ]
   },
   "ptBR": {
     "error": "Ooops.. Infelizmente não conseguimos estabelecer uma conexão com o servidor.",
@@ -110,7 +118,7 @@
       {
         "tab": "server",
         "comment_one": "você precisa iniciar o servidor para executar o aplicativo corretamente",
-        "comment_two": "digite no terminal o seguinte comando e pressione enter: node server.js",
+        "comment_two": "digite no terminal o seguinte comando e pressione enter: node server.ts",
         "comment_three": "NÃO FECHE ESSA ABA ENQUANTO O SERVIDOR ESTIVER RODANDO!"
       }
     ],
@@ -138,7 +146,7 @@
       "title": "Experiência Profissional",
       "items": [
         {
-          "title": "Mid Level Software Developer",
+          "title": "Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - maio/2024"
         },
@@ -162,7 +170,9 @@
     "education": {
       "title": "Formação acadêmica",
       "university": "Universidade de Fortaleza (UNIFOR)",
-      "description": "Tecnólogo, Análise e Desenvolvimento de Sistemas"
+      "description": "Tecnólogo, Análise e Desenvolvimento de Sistemas",
+      "englishSchool": "ILSC Toronto",
+      "englishDescription": "Programa de Imersão em Inglês durante intercâmbio de 3 meses em Toronto."
     },
     "certificates": {
       "title": "Certificados"
@@ -193,7 +203,13 @@
         "three": "Esportes"
       }
     },
-    "dark_mode": ["Modo Escuro", "Dark Mode", "Não tem modo claro", "Quem usa modo claro?", "Desista!"]
+    "dark_mode": [
+      "Modo Escuro",
+      "Dark Mode",
+      "Não tem modo claro",
+      "Quem usa modo claro?",
+      "Desista!"
+    ]
   },
   "esES": {
     "error": "Ooops... Desafortunadamente, no pudimos establecer una conexión con el servidor.",
@@ -208,7 +224,7 @@
       {
         "tab": "server",
         "comment_one": "necesitas iniciar el servidor para ejecutar la aplicación correctamente",
-        "comment_two": "escribe en la terminal el siguiente comando y presiona enter: node server.js",
+        "comment_two": "escribe en la terminal el siguiente comando y presiona enter: node server.ts",
         "comment_three": "¡NO CIERRES ESTA PESTAÑA MIENTRAS EL SERVIDOR ESTÁ FUNCIONANDO!"
       }
     ],
@@ -236,7 +252,7 @@
       "title": "Experiencia Profesional",
       "items": [
         {
-          "title": "Mid Level Software Developer",
+          "title": "Software Developer",
           "place": "Bean Softwares",
           "date": "jul/2022 - mayo"
         },
@@ -260,7 +276,9 @@
     "education": {
       "title": "Formación Académica",
       "university": "Universidade de Fortaleza (UNIFOR)",
-      "description": "Título de Asociado en Ciencias en Análisis y Desarrollo de Sistemas"
+      "description": "Título de Asociado en Ciencias en Análisis y Desarrollo de Sistemas",
+      "englishSchool": "ILSC Toronto",
+      "englishDescription": "Programa de Inmersión en Inglés durante un intercambio de 3 meses en Toronto."
     },
     "certificates": {
       "title": "Certificados"
@@ -290,6 +308,12 @@
         "three": "Deportes"
       }
     },
-    "dark_mode": ["Modo Oscuro", "Modo Nocturno", "Sin Modo Claro", "¿Quién usa el modo claro?", "Rendirse!"]
+    "dark_mode": [
+      "Modo Oscuro",
+      "Modo Nocturno",
+      "Sin Modo Claro",
+      "¿Quién usa el modo claro?",
+      "Rendirse!"
+    ]
   }
 }
