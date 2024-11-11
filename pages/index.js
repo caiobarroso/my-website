@@ -22,6 +22,7 @@ const certificados = [
   "/udemy.webp",
   "/certificado-tdd.webp",
   "/certificado.webp",
+  "/ilsc.webp",
 ];
 
 function Modal({ isOpen, close, children }) {
